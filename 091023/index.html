@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>ICodeThis 09/10/23 Closest stores</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="locListBackground"></div>
+      <div class="locList">
+        <h3>Closest stores</h3>
+        <div>Postal Code</div>
+        <div class="locationInput">
+          <input id="zip" name="zip" type="text" pattern="[0-9]*" />
+          <button class="location">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="ionicon"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="32"
+              />
+              <circle
+                cx="256"
+                cy="192"
+                r="48"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="32"
+              />
+            </svg>
+            Use my location
+          </button>
+        </div>
+        <ul>
+          <li class="storeAdress">
+            <div class="locName">
+              <h4 class="closed">POINT Bergen Sentrum</h4>
+            </div>
+            <p>Strandagaten 55-57, 6007 Bergen</p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                />
+              </svg>
+              9:00-19:00
+            </p>
+          </li>
+          <li class="storeAdress">
+            <div class="locName">
+              <h4>POINT Bergen Sentrum</h4>
+            </div>
+            <p>Strandagaten 55-57, 6007 Bergen</p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                />
+              </svg>
+              9:00-21:00
+            </p>
+          </li>
+        </ul>
+        <button class="viewAll">View all</button>
+      </div>
+    </div>
+  </body>
+</html>

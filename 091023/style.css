@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-bg: rgb(28, 28, 55);
+  --sec-bg: rgb(18, 19, 40);
+  --font-color: rgb(173, 173, 223);
+  --sec-font-color: rgb(218, 217, 252);
+  --location-color: rgb(112, 118, 251);
+}
+body {
+  background-color: var(--main-bg);
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 20rem;
+  display: grid;
+  grid-template-columns: repeat(8, 2.5rem);
+  grid-template-rows: repeat(8, 2.5rem);
+}
+.locListBackground,
+.locList {
+  min-height: 17.5rem;
+}
+
+.locListBackground {
+  background-color: gray;
+  grid-column: 1/8;
+  border-radius: 1.8rem;
+  border-top-left-radius: 0;
+  background: linear-gradient(
+    145deg,
+    rgb(250, 100, 170),
+    rgb(170, 112, 220),
+    rgb(170, 112, 220)
+  );
+}
+.locList {
+  position: relative;
+  background-color: var(--sec-bg);
+  color: var(--font-color);
+  grid-column: 2/-1;
+  grid-row-start: 2;
+  border-radius: 1rem;
+  padding: 1.8rem;
+  height: min-content;
+}
+.locList > * {
+  padding-top: 1rem;
+}
+.locList h3 {
+  font-size: 0.9rem;
+}
+.locList h3 + div {
+  font-size: 0.5rem;
+}
+.locationInput {
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.locationInput > * {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.locationInput #zip {
+  width: 40%;
+  background-color: var(--sec-bg);
+  height: 2rem;
+  color: var(--font-color);
+  border: 1px solid rgba(104, 100, 211, 0.3);
+  margin: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+
+.locList button.location {
+  color: var(--location-color);
+  background-color: var(--sec-bg);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  gap: 0.2rem;
+  align-items: flex-end;
+}
+.locList .location svg {
+  display: inline-block;
+  margin: auto 0;
+  width: 1.2rem;
+  stroke: var(--location-color);
+}
+.locList li {
+  list-style: none;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
+.locList li > * {
+  font-size: 0.7rem;
+  padding-top: 0.5rem;
+}
+.locList .locName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.locList li h4 {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.locList li h4.closed::after {
+  content: "CLOSED";
+  text-transform: capitalize;
+  color: var(--sec-font-color);
+  font-size: 0.5rem;
+  font-weight: bolder;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(243, 102, 166);
+}
+.locList li h4::after {
+  content: "OPEN";
+  text-transform: capitalize;
+  color: var(--sec-font-color);
+  font-size: 0.5rem;
+  font-weight: bolder;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(40, 183, 164);
+}
+
+.locList li p {
+  display: flex;
+  align-items: flex-end;
+}
+.locList li p svg {
+  display: inline-block;
+  width: 1rem;
+  fill: var(--font-color);
+  margin-right: 0.5rem;
+}
+.locList button.viewAll {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  background-color: var(--location-color);
+  color: var(--sec-font-color);
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding: 0.5rem;
+}
