@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* todo change back to correct color */
+  --main-bg: rgb(255, 255, 255);
+  --sec-bg: rgb(255, 252, 249);
+  /* --main-bg: rgb(142, 142, 142); */
+  /* --sec-bg: rgb(178, 224, 173); */
+
+  --font-color: rgb(20, 38, 60);
+  --sec-font-color: rgb(0, 0, 0);
+  --third-font-color: rgb(81, 80, 80);
+  --contrast-color: rgb(247, 239, 233);
+  --logo-color: rgb(219, 221, 223);
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--main-bg);
+}
+body > :nth-child(odd) {
+  background-color: var(--main-bg);
+}
+body > :nth-child(even) {
+  background-color: var(--sec-bg);
+  border-top: 1px solid var(--contrast-color);
+  border-bottom: 1px solid var(--contrast-color);
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--third-font-color);
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 1.5rem;
+  align-items: center;
+}
+nav .logo {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--logo-color);
+}
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  list-style: none;
+  text-decoration: none;
+}
+nav > ul > li > a,
+nav > ul > li > a:visited {
+  color: var(--third-font-color);
+  padding: 0 1rem;
+  text-decoration: none;
+  appearance: none;
+}
+nav > .account {
+  justify-self: end;
+}
+nav button.trial {
+  margin-left: 0.5rem;
+}
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 0.6rem;
+  margin-left: 0.5rem;
+  color: var(--logo-color);
+  background-color: var(--contrast-color);
+}
+
+button.trial {
+  background-color: var(--font-color);
+  color: var(--contrast-color);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section#home h1 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--font-color);
+  text-align: center;
+  width: 38vw;
+}
+section#home p {
+  text-align: center;
+  width: 38vw;
+  margin: 1rem;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+section#home button {
+  padding: 1rem 1.5rem;
+}
+section {
+  min-height: 40vh;
+}
+#articles h4 {
+  width: 38vw;
+  font-size: 0.4rem;
+  text-align: center;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem -1.5rem;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  background: var(--third-font-color);
+  height: 1px;
+  margin: 0 1em;
+}
+.cards-container {
+  width: 80vw;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.cards-container img {
+  width: 10rem;
+  height: 8rem;
+  object-fit: cover;
+}
+.cards-container h3 {
+  width: 10rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.cards-container .date {
+  font-size: 0.5rem;
+}
