@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-bg: rgb(244, 245, 252);
+  --sec-bg: rgb(255, 255, 255);
+
+  --font-color: rgb(20, 38, 60);
+  --sec-font-color: rgb(0, 0, 0);
+
+  --first-logo-bg: rgb(254, 239, 242);
+  --sec-logo-bg: rgb(238, 243, 254);
+  --third-logo-bg: rgb(229, 247, 236);
+  --fourth-logo-bg: rgb(249, 241, 227);
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--main-bg);
+  height: 100vh;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  margin: 1rem;
+}
+nav ul li {
+  list-style: none;
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+nav svg {
+  display: inline-block;
+  width: 1.2em;
+}
+nav li.active {
+  background-color: var(--sec-bg);
+}
+nav li.active > svg {
+  transform: rotate(180deg);
+  transition: transform 1s;
+}
+li.active .dropdown {
+  display: flex;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: var(--sec-bg);
+  top: 4em;
+  right: 0;
+  padding: 2em;
+  display: none;
+  border-radius: 1rem;
+  box-shadow: 4px 8px 20px -5px rgba(67, 117, 177, 0.424);
+}
+
+.dropdown .icon {
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.help div.card:nth-of-type(1) .icon,
+.help div.card:nth-of-type(1) {
+  background-color: var(--first-logo-bg);
+}
+.help div.card:nth-of-type(2) .icon,
+.help div.card:nth-of-type(2) {
+  background-color: var(--sec-logo-bg);
+}
+.learn div.card:nth-of-type(1) .icon,
+.learn div.card:nth-of-type(1) {
+  background-color: var(--third-logo-bg);
+}
+.learn div.card:nth-of-type(2) .icon,
+.learn div.card:nth-of-type(2) {
+  background-color: var(--fourth-logo-bg);
+}
+.dropdown div.card:not(:hover) {
+  background-color: var(--sec-bg);
+}
+.dropdown svg {
+  display: block;
+  min-width: 2em;
+  height: 2em;
+}
+.dropdown .card {
+  border-radius: 1rem;
+  padding: 1em;
+  padding-left: 0;
+  margin: 1em;
+  margin-left: 0;
+  display: flex;
+  width: 30rem;
+  max-width: 30vw;
+}
+.card .text {
+  margin-left: 1em;
+}
