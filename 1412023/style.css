@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-bg: #141928;
+
+  --font-color: #ffffff;
+  --sec-font-color: #282828;
+  --button-radius: 0.6rem;
+
+  /*will be changed in script.js  */
+  --contrast-color: #f4843a;
+}
+body {
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+button {
+  font-weight: bolder;
+  font-size: 0.8rem;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.container {
+  margin: 0 auto;
+  width: 90vw;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.container > * {
+  margin: 2rem;
+}
+.plan-card {
+  background-color: var(--contrast-color);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.plan-card h2 {
+  font-size: 1.25rem;
+}
+.plan-card p {
+  font-size: 0.9rem;
+  max-width: 28ch;
+  padding: 1rem 0;
+}
+.plan-card button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--button-radius);
+}
+.useCase {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.caseSelector {
+  background-color: var(--font-color);
+  display: flex;
+  border-radius: 1rem;
+}
+.caseSelector button:first-child {
+  border-top-left-radius: var(--button-radius);
+  border-bottom-left-radius: var(--button-radius);
+}
+.caseSelector button:last-child {
+  border-top-right-radius: var(--button-radius);
+  border-bottom-right-radius: var(--button-radius);
+}
+.caseSelector button {
+  padding: 1rem 1.4rem;
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+}
+.caseSelector button.caseSelected {
+  background-color: var(--font-color);
+  color: var(--main-bg);
+}
+
+.userCount {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 12rem;
+}
+.userCount h3 {
+  padding: 1rem;
+}
+.userCount input {
+  --thumbSize: 1.25rem;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+.userCount .sliderContainer {
+  width: 100%;
+  position: relative;
+}
+.range-value {
+  width: calc(6ch + 1rem);
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  position: absolute;
+  color: var(--main-bg);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 0.9rem;
+  background-color: var(--font-color);
+  top: calc(50% + 0.5rem);
+}
+.range-value::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc((100% - 1rem) / 2);
+  background-color: var(--font-color);
+  width: 1rem;
+  height: 1rem;
+  z-index: -1;
+  transform: scale(1, 1.2) rotate(45deg);
+}
+datalist {
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* copied code from https://range-input-css.netlify.app/ */
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--contrast-color);
+  border-radius: 0.5rem;
+  height: 0.25rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: -8px; /* Centers thumb on the track */
+  background-color: var(--font-color);
+  border-radius: 50%;
+  height: var(--thumbSize);
+  width: var(--thumbSize);
+}
