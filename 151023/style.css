@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-bg: hsl(41, 94%, 61%);
+  --sec-bg: hsl(227, 63%, 32%);
+  --font-color: #ffffff;
+
+  --contrast-color: #e7bc31;
+  --sec-contrast-color: #4fa0f9;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  align-items: center;
+}
+h2 {
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+.card-container {
+  margin: auto;
+  max-width: 800px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.card-container > .card {
+  background-color: var(--sec-bg);
+  border-radius: 30px;
+  padding: 30px 25px 25px 30px;
+  position: relative;
+}
+.card-container > .card::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  background: rgba(108, 6, 6, 0.237);
+  width: 80%;
+  height: 5%;
+  border-radius: 40%;
+  filter: blur(5px);
+}
+.contributors.card {
+  width: 325px;
+}
+.about.card {
+  width: 240px;
+  margin-left: 120px;
+}
+.languages.card {
+  width: 325px;
+  margin-left: 120px;
+}
+.contributors.card h2 {
+  padding: 10px 0;
+}
+.contributors h2 span.count {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  background-color: #0a2574;
+  padding: 0.4rem;
+}
+
+.profilePicsContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 6px;
+  padding-bottom: 10px;
+}
+.profilePic {
+  margin-left: -8px;
+}
+.profilePic > * {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--sec-bg);
+}
+.profilePic img {
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+.profilePic > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--font-color);
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+.about.card {
+  margin-top: 12px;
+  font-size: 0.8rem;
+}
+.about.card > * {
+  padding: 10px 0;
+}
+.about.card > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.about.card svg {
+  display: block;
+  width: 20px;
+  fill: var(--font-color);
+}
+.about.card a {
+  color: var(--font-color);
+}
+.about.card a:visited {
+  color: var(--font-color);
+}
+.languages.card .distributionBar {
+  margin: 15px 0;
+  width: 100%;
+  height: 8px;
+  display: flex;
+}
+.languages.card .blue {
+  background-color: var(--sec-contrast-color);
+}
+.languages.card .yellow {
+  background-color: var(--contrast-color);
+}
+.distributionBar .blue {
+  height: 100%;
+  width: 35%;
+
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.distributionBar .yellow {
+  height: 100%;
+  width: 65%;
+
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.languages.card .langContainer {
+  display: flex;
+}
+.langContainer p {
+  font-size: 0.8rem;
+  padding-right: 10px;
+}
+.langContainer p > span {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+@media screen and (max-width: 700px) {
+  .card-container > .card {
+    margin: auto;
+  }
+}
