@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg-color: #ffffff;
+  --sec-color: #2f2f2f;
+  --font-color: #212121;
+  --sec-font-color: #7f7f7f;
+  --contrast-color: #f2f2f2;
+  --sec-contrast-color: #d9929f;
+  --padding-side: 45px;
+}
+
+body {
+  width: 80vw;
+  min-height: 80vh;
+  margin: auto;
+  border: 1px solid black;
+  /* min-height: 100vh; */
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+li {
+  padding: 10px;
+  border-radius: 2px;
+}
+button {
+  border: none;
+  background-color: var(--main-bg);
+  cursor: pointer;
+  height: 100%;
+}
+.navbarTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  border-bottom: 2px solid var(--contrast-color);
+  height: 60px;
+  align-items: center;
+}
+.navbarTop ul {
+  padding-left: var(--padding-side);
+}
+
+.navbarTop a,
+.navbarTop a:visited {
+  font-weight: bolder;
+  color: var(--sec-font-color);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.navbarTop li:hover {
+  background-color: var(--contrast-color);
+}
+.navbarTop li.active a {
+  color: var(--font-color);
+}
+
+.navbarTop .account {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.navbarTop .account button {
+  padding: 0 30px;
+
+  font-weight: bolder;
+  color: var(--sec-font-color);
+  font-size: 0.8rem;
+}
+.navbarTop .account button#getStarted {
+  background-color: var(--sec-color);
+  font-weight: lighter;
+  color: var(--contrast-color);
+  padding-right: var(--padding-side);
+}
+.navbarTop .account button#getStarted:hover {
+  color: var(--bg-color);
+}
+
+.navbarTop .account button#logIn:hover {
+  /* border-left: 2px solid var(--contrast-color); */
+  color: var(--font-color);
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .content {
+  padding-left: var(--padding-side);
+}
+
+.content > * {
+  padding-top: 20px;
+}
+.content header span {
+  font-size: 0.7rem;
+  background-color: var(--contrast-color);
+  padding: 6px 10px;
+  border-radius: 1.2rem;
+  font-weight: bolder;
+  color: var(--sec-color);
+}
+.content h1 {
+  font-size: 1.6rem;
+}
+.content .period.nav {
+  padding-top: 14px;
+}
+.content .period.nav ul > li {
+  padding: 6px 10px;
+}
+.content .period.nav ul > li button {
+  color: var(--sec-font-color);
+  font-size: 0.7rem;
+}
+.content .period.nav ul > li:hover {
+  background-color: var(--contrast-color);
+}
+.content .period.nav ul > li.selected {
+  background-color: var(--sec-color);
+}
+.content .period.nav ul > li.selected button {
+  color: var(--bg-color);
+}
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+.mainContent .contentContainer {
+  padding: 20px 0px;
+  border-bottom: 2px solid var(--contrast-color);
+}
+.mainContent .contentContainer:last-of-type {
+  border-bottom: none;
+}
+.mainContent .contentContainer header {
+  font-size: 0.8rem;
+  color: var(--sec-font-color);
+}
+.mainContent .contentContainer h2 {
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+}
+.sidebar {
+  border: 2px solid var(--contrast-color);
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar ul .headline {
+}
+.sidebar ul .headline svg {
+  width: 2rem;
+}

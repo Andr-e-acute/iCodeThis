@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>iCode this 16.10.23</title>
+  </head>
+  <body>
+    <nav class="navbarTop">
+      <ul>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Live</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li class="active"><a href="#">Conferences</a></li>
+      </ul>
+      <div class="account">
+        <button id="logIn">Log In</button>
+        <button id="getStarted">Get Started</button>
+      </div>
+    </nav>
+    <header class="navIndicator">
+      <span>Conferences</span> / <span>Bergen</span>
+    </header>
+    <main>
+      <div class="content">
+        <h1>Conferences in Bergen</h1>
+        <nav class="period nav">
+          <ul>
+            <li class="selected"><button class="All">ALL</button></li>
+            <li><button class="Today">TODAY</button></li>
+            <li><button class="ThisWeek">THIS WEEK</button></li>
+            <li><button class="June">JUNE</button></li>
+            <li><button class="July">JULY</button></li>
+          </ul>
+        </nav>
+        <div class="mainContent">
+          <div class="contentContainer">
+            <header class="date">Mon, 22 - Fri. 26 Jun 2020 • Bergen</header>
+            <h2>International Conference on Tests and Proofs (TAP)</h2>
+          </div>
+          <div class="contentContainer">
+            <header class="date">Mon, 22 - Fri. 26 Jun 2020 • Bergen</header>
+            <h2>European Conference on Modelling Foundations</h2>
+          </div>
+          <div class="contentContainer">
+            <header class="date">Postponed • Bergen</header>
+            <h2>Conference on Graph Transformation</h2>
+          </div>
+          <div class="contentContainer">
+            <header class="date">Mon. 22 - Fri. 26 Jun 2020 • Bergen</header>
+            <h2>International Conference on Tests and Proofs (TAP)</h2>
+          </div>
+          <div class="contentContainer">
+            <header class="date">Postponed</header>
+            <h2>Scandinavian Logic Symposium (SLSS)</h2>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <h4>Discover</h4>
+        <ul>
+          <li>
+            <div class="headline">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M15,10.5C15,11.3 14.3,12 13.5,12C14.3,12 15,12.7 15,13.5V15A2,2 0 0,1 13,17H9V7H13A2,2 0 0,1 15,9V10.5M13,15V13H11V15H13M13,11V9H11V11H13M3,5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5M5,5V19H19V5H5Z"
+                />
+              </svg>
+              <h5>Business Intelligence</h5>
+            </div>
+            <p>
+              Historical, Current, and predictive hews of business operations.
+            </p>
+          </li>
+          <li>
+            <div class="headline">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M17,18A2,2 0 0,1 19,20A2,2 0 0,1 17,22C15.89,22 15,21.1 15,20C15,18.89 15.89,18 17,18M1,2H4.27L5.21,4H20A1,1 0 0,1 21,5C21,5.17 20.95,5.34 20.88,5.5L17.3,11.97C16.96,12.58 16.3,13 15.55,13H8.1L7.2,14.63L7.17,14.75A0.25,0.25 0 0,0 7.42,15H19V17H7C5.89,17 5,16.1 5,15C5,14.65 5.09,14.32 5.24,14.04L6.6,11.59L3,4H1V2M7,18A2,2 0 0,1 9,20A2,2 0 0,1 7,22C5.89,22 5,21.1 5,20C5,18.89 5.89,18 7,18M16,11L18.78,6H6.14L8.5,11H16Z"
+                />
+              </svg>
+              <h5>Commerce</h5>
+            </div>
+            <p>Systems. goods ond services. stroll and large scale.</p>
+          </li>
+          <li>
+            <div class="headline">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12,5A3.5,3.5 0 0,0 8.5,8.5A3.5,3.5 0 0,0 12,12A3.5,3.5 0 0,0 15.5,8.5A3.5,3.5 0 0,0 12,5M12,7A1.5,1.5 0 0,1 13.5,8.5A1.5,1.5 0 0,1 12,10A1.5,1.5 0 0,1 10.5,8.5A1.5,1.5 0 0,1 12,7M5.5,8A2.5,2.5 0 0,0 3,10.5C3,11.44 3.53,12.25 4.29,12.68C4.65,12.88 5.06,13 5.5,13C5.94,13 6.35,12.88 6.71,12.68C7.08,12.47 7.39,12.17 7.62,11.81C6.89,10.86 6.5,9.7 6.5,8.5C6.5,8.41 6.5,8.31 6.5,8.22C6.2,8.08 5.86,8 5.5,8M18.5,8C18.14,8 17.8,8.08 17.5,8.22C17.5,8.31 17.5,8.41 17.5,8.5C17.5,9.7 17.11,10.86 16.38,11.81C16.5,12 16.63,12.15 16.78,12.3C16.94,12.45 17.1,12.58 17.29,12.68C17.65,12.88 18.06,13 18.5,13C18.94,13 19.35,12.88 19.71,12.68C20.47,12.25 21,11.44 21,10.5A2.5,2.5 0 0,0 18.5,8M12,14C9.66,14 5,15.17 5,17.5V19H19V17.5C19,15.17 14.34,14 12,14M4.71,14.55C2.78,14.78 0,15.76 0,17.5V19H3V17.07C3,16.06 3.69,15.22 4.71,14.55M19.29,14.55C20.31,15.22 21,16.06 21,17.07V19H24V17.5C24,15.76 21.22,14.78 19.29,14.55M12,16C13.53,16 15.24,16.5 16.23,17H7.77C8.76,16.5 10.47,16 12,16Z"
+                />
+              </svg>
+              <h5>Human Resources</h5>
+            </div>
+            <p>About people who moke up the workforce Of an organization</p>
+          </li>
+          <li>
+            <div class="headline">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M2 20H22V7C22 6.2 21.68 5.44 21.12 4.88C20.56 4.32 19.8 4 19 4H5C4.2 4 3.44 4.32 2.88 4.88C2.32 5.44 2 6.2 2 7V20M20 11H15V9H9V11H4V7C4 6.74 4.11 6.5 4.29 6.29C4.5 6.11 4.74 6 5 6H19C19.27 6 19.5 6.11 19.71 6.29C19.9 6.5 20 6.74 20 7V11M15 13H20V18H4V13H9L11 15H13L15 13M11 11H13V13H11V11Z"
+                />
+              </svg>
+              <h5>Internet of Things</h5>
+            </div>
+            <p>Human-to-human and human-to- interaction.</p>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
