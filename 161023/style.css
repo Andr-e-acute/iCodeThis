@@ -10,9 +10,10 @@
   --sec-color: #2f2f2f;
   --font-color: #212121;
   --sec-font-color: #7f7f7f;
-  --contrast-color: #f2f2f2;
-  --sec-contrast-color: #d9929f;
+  --contrast-color: #dcdad1;
+  --sec-contrast-color: #e78395;
   --padding-side: 45px;
+  --border: 2px solid var(--contrast-color);
 }
 
 body {
@@ -29,6 +30,7 @@ body {
 ul {
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
 }
 li {
   padding: 10px;
@@ -45,12 +47,14 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  border-bottom: 2px solid var(--contrast-color);
-  height: 60px;
+  border-bottom: var(--border);
+  min-height: 60px;
   align-items: center;
 }
 .navbarTop ul {
+  height: 60px;
   padding-left: var(--padding-side);
+  align-items: center;
 }
 
 .navbarTop a,
@@ -68,7 +72,7 @@ button {
 }
 
 .navbarTop .account {
-  height: 100%;
+  height: 60px;
   display: flex;
   align-items: flex-end;
 }
@@ -79,6 +83,9 @@ button {
   font-weight: bolder;
   color: var(--sec-font-color);
   font-size: 0.8rem;
+}
+.navbarTop .account button#logIn {
+  padding-left: 55px;
 }
 .navbarTop .account button#getStarted {
   background-color: var(--sec-color);
@@ -94,18 +101,12 @@ button {
   /* border-left: 2px solid var(--contrast-color); */
   color: var(--font-color);
 }
-main {
-  display: flex;
-  flex-wrap: wrap;
-}
-main .content {
-  padding-left: var(--padding-side);
-}
-
-.content > * {
+header {
   padding-top: 20px;
+  padding-left: var(--padding-side);
+  font-weight: bold;
 }
-.content header span {
+header span {
   font-size: 0.7rem;
   background-color: var(--contrast-color);
   padding: 6px 10px;
@@ -113,10 +114,26 @@ main .content {
   font-weight: bolder;
   color: var(--sec-color);
 }
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .content {
+  /* padding: 0 var(--padding-side); */
+  margin-bottom: var(--padding-side);
+}
+
+.content > * {
+  padding-top: 20px;
+}
+
 .content h1 {
   font-size: 1.6rem;
+  padding-left: var(--padding-side);
 }
 .content .period.nav {
+  padding-left: var(--padding-side);
   padding-top: 14px;
 }
 .content .period.nav ul > li {
@@ -140,29 +157,75 @@ main .content {
   flex-direction: column;
 }
 .mainContent .contentContainer {
-  padding: 20px 0px;
-  border-bottom: 2px solid var(--contrast-color);
+  padding: 20px var(--padding-side);
+
+  border-bottom: var(--border);
+}
+.mainContent .contentContainer:hover {
+  background-color: var(--contrast-color);
 }
 .mainContent .contentContainer:last-of-type {
   border-bottom: none;
 }
 .mainContent .contentContainer header {
+  padding-left: 0;
   font-size: 0.8rem;
   color: var(--sec-font-color);
+}
+.mainContent .contentContainer header.invalid {
+  color: var(--sec-contrast-color);
 }
 .mainContent .contentContainer h2 {
   padding-top: 0.5rem;
   font-size: 1.2rem;
 }
 .sidebar {
-  border: 2px solid var(--contrast-color);
+  border: var(--border);
+  border-radius: 1rem;
+  padding: 40px 20px;
+
+  margin: 0 auto;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar h4 {
+  font-size: 1.1rem;
+  padding-left: 20px;
 }
 .sidebar ul {
   display: flex;
   flex-direction: column;
 }
+.sidebar ul li {
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+.sidebar ul li.selected {
+  background-color: var(--sec-color);
+  color: var(--contrast-color);
+}
+.sidebar ul li:hover {
+  background-color: var(--contrast-color);
+  color: var(--font-color);
+}
+.sidebar ul li.selected:hover svg {
+  fill: var(--font-color);
+}
+.sidebar ul li.selected svg {
+  fill: var(--contrast-color);
+}
+
 .sidebar ul .headline {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 10px;
 }
 .sidebar ul .headline svg {
   width: 2rem;
+  display: block;
+}
+.sidebar ul li p {
+  max-width: 30ch;
 }
