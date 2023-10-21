@@ -16,3 +16,4 @@ function updateDateTime() {
 setInterval(updateDateTime, 6000);
 
 updateDateTime();
+g

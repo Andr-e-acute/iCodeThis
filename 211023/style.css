@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+:root {
+  --main-bg: #181e37;
+  --main-bg-circle: #2d61d9;
+
+  --sec-bg-color: white;
+
+  --font-color: #181a1c;
+  --sec-font-color: #6b6b6d;
+
+  --button-color: #2e64d8;
+  --third-bg-gray: hsl(207, 85%, 95%);
+  --separator-line: 1px solid #f7f7f7;
+  font-size: 14px;
+}
+
+.screen {
+  height: 100vh;
+  padding: 2rem;
+  font-family: sans-serif;
+  color: #f9fdf9;
+  background-color: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 1.5rem;
+  max-width: 20ch;
+  text-align: center;
+  margin-top: 1rem;
+}
+.screen > p {
+  font-size: 0.75rem;
+  max-width: 42ch;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card {
+  background-color: var(--sec-bg-color);
+  color: var(--font-color);
+  width: 300px;
+  position: relative;
+  padding: 3rem;
+  padding-bottom: 2rem;
+  border-radius: 0.25rem;
+}
+.card h2 {
+  font-size: 1rem;
+  font-weight: 800;
+}
+.card h3 {
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.card p {
+  font-size: 0.75rem;
+}
+ul li {
+  padding: 1rem 0;
+}
+
+ul li svg {
+  width: 1rem;
+}
+.card button {
+  background-color: var(--button-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.625rem;
+}
+.card.left .seperator {
+  border: var(--separator-line);
+}
+.card.right ul li {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+.card.left::after {
+  content: "";
+  background-color: var(--main-bg-circle);
+  display: block;
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  bottom: -6vw;
+  left: -3vw;
+  border-radius: 50%;
+  z-index: -1;
+}
+.card.right::before {
+  content: "";
+  background-color: var(--main-bg-circle);
+  display: block;
+  position: absolute;
+
+  width: 40vw;
+  height: 40vw;
+  top: -20vw;
+  right: -15vw;
+  border-radius: 50%;
+  z-index: -1;
+}

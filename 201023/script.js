@@ -22,3 +22,4 @@ dropdowns.forEach((dropdown) => {
   });
 });
 body.addEventListener("click", deselectAlldropdowns);
+gi
