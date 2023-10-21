@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+:root {
+  --main-bg: #181e37;
+  --main-bg-circle: #2d61d9;
+
+  --sec-bg-color: white;
+
+  --font-color: #181a1c;
+  --sec-font-color: #6b6b6d;
+
+  --button-color: #2e64d8;
+  --third-bg-gray: hsl(207, 85%, 95%);
+  --separator-line: 1px solid #f7f7f7;
+}
