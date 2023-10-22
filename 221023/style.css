@@ -9,15 +9,72 @@ li {
   list-style: none;
 }
 :root {
-  --main-bg: #181e37;
-  --main-bg-circle: #2d61d9;
+  --main-bg: #15191f;
+  --sec-bg-color: #232832;
+  --third-bg: #1d222c;
 
-  --sec-bg-color: white;
-
-  --font-color: #181a1c;
-  --sec-font-color: #6b6b6d;
+  --font-color: white;
+  --sec-font-color: #cbd1d6;
 
   --button-color: #2e64d8;
   --third-bg-gray: hsl(207, 85%, 95%);
   --separator-line: 1px solid #f7f7f7;
+}
+body {
+  font-family: sans-serif;
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg);
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sec-bg-color);
+  padding: 0 4rem;
+}
+.container svg {
+  width: 10rem;
+  margin-top: 3rem;
+}
+.container h1 {
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+.container p {
+  font-weight: 300;
+  padding: 1rem;
+  font-size: 0.825rem;
+  max-width: 32ch;
+  text-align: center;
+}
+
+.container button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.price-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--third-bg);
+  margin: 2rem;
+}
+.price-Container h3 {
+  font-size: 0.95rem;
+  color: var(--sec-font-color);
+  font-weight: 300;
+}
+.price-Container p {
+  text-align: center;
+  font-size: 0.625rem;
+  color: var(--sec-font-color);
 }
