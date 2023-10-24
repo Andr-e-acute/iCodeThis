@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>I code this 24.10.23 Message Box</title>
+  </head>
+  <body>
+    <div class="screen">
+      <form>
+        <div class="title">
+          <h2>Send us a message</h2>
+        </div>
+        <div id="form_name">
+          <label for="user_name">YOUR NAME </label>
+          <input type="text" name="name" id="user_name" />
+        </div>
+        <div id="form_email">
+          <label for="user_email">EMAIL ADDRESS </label>
+          <input type="email" name="email" id="user_email" />
+        </div>
+        <div id="form_reply">
+          <label for="user_name">WHAT CAN WE DO FOR YOU?</label>
+          <textarea name="reply" id="user_reply" cols="30" rows="5"></textarea>
+        </div>
+        <div id="form_file">
+          <label for="user_file">ATTACHMENTS</label>
+          <label for="user_file" id="upload_file_label">Upload Files</label>
+          <input type="file" name="name" id="user_file" />
+        </div>
+        <button type="submit">Send Messages</button>
+      </form>
+    </div>
+  </body>
+</html>
