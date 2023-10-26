@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-bg: #eceff7;
+  --sec-bg-color: #f8f9fd;
+
+  --font-color: #000;
+  --sec-font-color: #fff;
+  --third-font-color: #929399;
+
+  --button-color: #fc9969;
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--main-bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: var(--sec-bg-color);
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card > svg {
+  width: 100%;
+  max-width: 12rem;
+}
+.card h1 {
+  font-size: 1rem;
+  max-width: 18ch;
+  text-align: center;
+}
+.card p {
+  font-size: 0.625rem;
+  max-width: 28ch;
+  text-align: center;
+}
+.card .navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
