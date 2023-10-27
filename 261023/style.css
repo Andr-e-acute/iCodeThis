@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-bg: #3e3c46;
+  --sec-bg-color: #393741;
+  --third-bg-color: #42414a;
+
+  --font-color: #f5f4f9;
+  --sec-font-color: #95939d;
+
+  /* seems to me a linear gradient */
+  --button-color: #e58c49;
+  --tooltip-color: #2d2c33;
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--main-bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+svg {
+  width: 2rem;
+}
+.screen {
+  background-color: var(--sec-bg-color);
+}
+.screen nav {
+  display: flex;
+}
