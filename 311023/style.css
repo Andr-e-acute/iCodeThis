@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-bg: #253469;
+
+  --font-color: #000;
+  --sec-font-color: #fff;
+  --border-color: #cececea2;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(85%);
+  overflow: hidden;
+}
+
+.side {
+  max-width: 30vw;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonCard {
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: -3px 5px 5px 2px #1d284f;
+}
+.side .buttonCard:nth-child(1) {
+  background-image: url(https://images.pexels.com/photos/1144690/pexels-photo-1144690.jpeg);
+  background-size: 200% auto;
+  background-position: 70% 14%;
+}
+.side .buttonCard:nth-child(2) {
+  background-image: url(https://images.pexels.com/photos/5635097/pexels-photo-5635097.jpeg);
+  background-size: 100% auto;
+  background-position: -20px 69%;
+}
+img {
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  box-shadow: -3px 5px 5px 2px #1d284f;
+}
+.side h3 {
+  color: var(--sec-font-color);
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 20ch;
+}
+.side .divider {
+  margin: 0.5rem 0rem;
+  border-top: 1px solid var(--sec-font-color);
+}
+.main {
+  max-width: 45vw;
+}
+.main img {
+  width: 100%;
+  margin: 0;
+  box-shadow: none;
+}
+.main .detail-Card .img-Caption {
+  background-color: #fff;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+.main .buttonCard {
+  background-image: url(https://pics.craiyon.com/2023-10-31/605c6f9913454e85b363af94a9786b17.webp);
+  background-size: 90% auto;
+  background-position: 0% 30%;
+}
