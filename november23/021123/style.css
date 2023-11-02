@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg: #2c2645;
+  --sec-bg: #abb0b1;
+  --third-bg: #37474e;
+  --social-bar-bg: #50636d;
+  --date-bg-color: #2f3d43;
+
+  --font-color: #ebeef3;
+  --sec-font-color: #adb1b2;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.screen {
+  background-color: var(--sec-bg);
+  min-width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: var(--third-bg);
+  padding-top: 1.5rem;
+  max-width: 15rem;
+}
+.card > * {
+  padding: 0 1.5rem;
+}
+.card img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  font-size: 0.625rem;
+  max-width: 32ch;
+  font-weight: 600;
+}
+.card .dateline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .dateline span {
+  font-size: 0.5rem;
+  color: var(--sec-font-color);
+}
+.dateline .date {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--date-bg-color);
+  border-radius: 0.5rem;
+}
+.card p {
+  margin: 1rem 0;
+  font-size: 0.55rem;
+  line-height: 0.85rem;
+}
+.social-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.5rem;
+  background-color: var(--social-bar-bg);
+  padding: 1.5rem;
+}
+.social-bar svg {
+  height: 0.75rem;
+  fill: var(--sec-font-color);
+}
+.social-bar div:nth-of-type(1) svg {
+  fill: #f84882;
+}
+.social-bar > div {
+  display: flex;
+  font-size: 0.5rem;
+  align-items: center;
+  gap: 0.25rem;
+}
