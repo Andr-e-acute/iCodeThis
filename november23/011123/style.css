@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg: #d1e4fe;
+  --sec-bg: #fff;
+  --third-bg: #ebf2fe;
+  --font-color: #5a78cf;
+  --sec-font-color: #6a6c77;
+  --third-font-color: #f5fdff;
+  --butt-color: #4064c8;
+  --sec-butt-color: #eceef9;
+}
+
+.screen {
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  position: relative;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  max-width: 16rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 6px 15px -5px #4e609ba3;
+  padding: 4rem 3rem 2rem 3rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 70%;
+  transform: rotateZ(20deg);
+  background-color: var(--third-bg);
+  z-index: -2;
+  top: -14%;
+  border-top-right-radius: 40%;
+  border-top-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  border-bottom-left-radius: 50%;
+  box-shadow: 7px 0px 2px 5px #c6d7f6a2;
+}
+.card svg {
+  width: 6rem;
+}
+.card h1 {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 800;
+}
+.card p {
+  color: var(--sec-font-color);
+  text-align: center;
+  font-size: 0.625rem;
+  padding: 1.5rem 0;
+}
+.nav-dots {
+  display: flex;
+  gap: 0.175rem;
+  padding: 1.5rem 0;
+}
+.nav-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: var(--sec-butt-color);
+  border-radius: 50%;
+}
+.butt-container {
+  display: flex;
+  gap: 1rem;
+}
+.butt-container button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 1.25rem;
+  border: none;
+  font-weight: 700;
+  font-size: 0.625rem;
+}
+.butt-container button:nth-child(1) {
+  background-color: var(--sec-butt-color);
+  color: var(--sec-font-color);
+}
+.butt-container button:nth-child(2) {
+  background-color: var(--butt-color);
+  color: var(--third-bg);
+}
