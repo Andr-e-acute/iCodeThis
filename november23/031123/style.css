@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg: #27292b;
+  --sec-bg: #2f3133;
+  --third-bg: #232526;
+
+  --yellow-contrast: #f9c652;
+
+  --button-color: #1c1e1f;
+
+  --font-color: #adadad;
+
+  --sec-font-color: #adb1b2;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--font-color);
+  font-family: sans-serif;
+}
+.card-container {
+  height: 80vh;
+  margin: 10vh 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+svg.crop path.yellow {
+  stroke: #000;
+  stroke-width: 1.5;
+  fill: var(--yellow-contrast);
+}
+
+.card {
+  height: 100%;
+  background-color: var(--sec-bg);
+  /* display: fle;x
+  flex-direction: column; */
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 16rem;
+  box-shadow: -8px 5px 15px 8px #1d1f20;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: -8px 5px 15px 8px #5a5e5f;
+}
+.card .description-container {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.card .description-container .banner {
+  /* magic number  */
+  top: 1rem;
+  right: -3rem;
+  font-weight: 600;
+  position: absolute;
+  color: white;
+  display: block;
+  padding: 0.5rem 4rem;
+  background-color: lightblue;
+  transform: rotateZ(45deg);
+  box-shadow: 0px 0px 20px 4px #1d1f20;
+}
+.card:nth-child(1) .description-container .banner {
+  background-color: #15abf5;
+}
+.card:nth-child(2) .description-container .banner {
+  background-color: #a23dfa;
+}
+.card:nth-child(3) .description-container .banner {
+  background-color: #ee2157;
+}
+.card .description-container svg {
+  height: 3rem;
+}
+
+.description-container h1 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--yellow-contrast);
+  padding: 1rem 0;
+}
+.description-container p {
+  font-size: 0.675rem;
+  line-height: 1rem;
+  color: var(--font-color);
+}
+
+.feature-container {
+  background-color: var(--third-bg);
+  padding: 1.5rem;
+}
+
+.feature-container ul li {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  list-style: none;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-weight: 500;
+  color: #eee;
+}
+.feature-container ul li::before {
+  content: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg viewBox="228.4475 316.3123 10.9452 9.5341"  xmlns="http://www.w3.org/2000/svg"><path fill="%23f9c652" fill-rule="evenodd" clip-rule="evenodd" d="M 230.354 321.388 C 229.963 320.997 229.131 320.401 228.74 320.792 C 228.35 321.182 228.35 321.815 228.74 322.206 L 231.641 325.554 C 232.032 325.944 232.665 325.944 233.056 325.554 L 235.411 322.703 C 237.148 320.44 238.142 319.149 239.138 317.14 C 240.134 315.131 238.136 316.881 234.418 321.288 L 232.497 323.607 L 230.354 321.388 Z" transform="matrix(1, 0, 0, 1, 2.842170943040401e-14, 0)"/></svg>');
+  display: block;
+  width: 1.25rem;
+  flex-shrink: 0;
+}
+.feature-container button {
+  margin-top: 3rem;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  color: var(--yellow-contrast);
+  background-color: var(--button-color);
+  border: none;
+}
+.feature-container button:hover {
+  color: var(--button-color);
+  background-color: var(--yellow-contrast);
+}
