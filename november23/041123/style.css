@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg: linear-gradient(90deg, #fb786b, #fc9f84);
+  --sec-bg: #37474e;
+  --third-bg: #ffffff;
+
+  --font-color: #f3fcfc;
+  --sec-font-color: #373c3d;
+  --third-font-color: #929493;
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--font-color);
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+body .screen {
+  height: 70vh;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.screen .sidebar {
+  background-color: var(--sec-bg);
+}
+.sidebar input {
+  margin: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  width: 10rem;
+  background-color: #45555c;
+  color: #c4c7c9;
+}
+.sidebar .cat-container {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.sidebar h3 {
+  text-transform: uppercase;
+  color: var(--font-color);
+  font-size: 0.625rem;
+  letter-spacing: 0.05rem;
+}
+.sidebar .count {
+  font-size: 0.5rem;
+  background-color: #2e3e46;
+  width: 1.5rem;
+  text-align: center;
+  padding: 0.125rem;
+  border-radius: 0.5rem;
+}
+.sidebar .cat-container:hover {
+  background-color: var(--third-bg);
+}
+.sidebar .cat-container:hover h3 {
+  color: var(--sec-font-color);
+}
+.sidebar .cat-container:hover .count {
+  background-color: #dfe4e3;
+  color: var(--sec-font-color);
+}
+
+.screen main {
+  padding-top: 1rem;
+  background-color: var(--third-bg);
+  color: var(--sec-font-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+main .under-kat h2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+main .under-kat h2:after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>dots-vertical</title><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>');
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+}
+main .under-kat.closed {
+  background-color: #f1f1f3;
+}
+.under-kat ul.tasks {
+  font-size: 0.875rem;
+  color: var(--third-font-color);
+}
+.under-kat ul.tasks li {
+  min-width: 20rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.under-kat ul.tasks li.done {
+  text-decoration: line-through;
+}
