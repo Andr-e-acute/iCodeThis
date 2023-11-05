@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg: #f2f5ff;
+  --sec-bg: #fff;
+  --third-bg: #273a64;
+
+  --font-color: #f3fcfc;
+  --second-font-color: #929493;
+  --gray-color: #e0e3eb;
+  --blue-color: #6987d1;
+}
+
+body {
+  background-color: var(--main-bg);
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.screen > * {
+  width: 16rem;
+  height: 28rem;
+  box-shadow: -5px 10px 40px -5px #273a646f;
+  background-color: var(--sec-bg);
+  border-radius: 0.5rem;
+}
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+.loginCard svg {
+  padding-top: 1.5rem;
+  width: 8rem;
+  fill: var(--gray-color);
+}
+.loginCard form {
+  width: 100%;
+  padding: 1.5rem 0;
+  align-self: start;
+}
+.loginCard form > label {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  font-weight: 600;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+#username,
+#password {
+  height: 2.5rem;
+  padding-left: 1rem;
+  font-size: 0.75rem;
+  color: var(--gray-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 0.125rem;
+}
+button#login {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.125rem;
+  color: var(--font-color);
+  font-size: 0.625rem;
+  background-color: var(--blue-color);
+}
+.loginCard.hidden,
+#lampCard.hidden {
+  display: none;
+}
+#lampCard {
+  background-color: var(--sec-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 3rem;
+}
+#lampCard.off {
+  background-color: var(--third-bg);
+}
+#lampCard button {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  font-size: 1rem;
+
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0px 0px 0.25rem 0.75rem #e6e9f1;
+}
+#lampCard button:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0px 0px 0.25rem 0.75rem #c3c3c5;
+}
+#lampCard.off button {
+  color: #5c79bb;
+  background-color: #1d2e56;
+  box-shadow: 0px 0px 0rem 0.5rem #2e416b;
+}
+
+#lampCard.off button:hover {
+  background-color: #18274a;
+  box-shadow: 0px 0px 0rem 0.5rem #3c4f77;
+}
