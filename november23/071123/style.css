@@ -1,0 +1,296 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-main: #091f3a;
+  --bg-circles: #31486969;
+  --font-color: #fff;
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  padding: 5rem;
+}
+body .card {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  position: relative;
+}
+body .card::after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  background-color: var(--bg-circles);
+}
+.quality.card {
+  background-color: #f6775e;
+  margin-bottom: 1rem;
+}
+.quality.card::after {
+  z-index: -1;
+  right: -2rem;
+  top: -3rem;
+  width: 6rem;
+  height: 6rem;
+}
+.quality.card label {
+  width: 6rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quality.card label input {
+  width: 2.25rem;
+  height: 2.25rem;
+  appearance: none;
+  border-radius: 50%;
+  background-color: #fca694;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.quality.card label input:after {
+  position: absolute;
+  top: 50%;
+  left: 2.5rem;
+  content: "";
+  width: 3rem;
+  height: 0.125rem;
+  background-color: #fca694;
+}
+.quality.card label:last-of-type input:after {
+  display: none;
+}
+.quality.card label input:checked:before {
+  content: url('data:image/svg+xml,<svg width="1rem" height="1rem" viewBox="0 -1.5 12 12" id="meteor-icon-kit__regular-checkmark-xs" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.70711 4.2929C1.31658 3.9024 0.68342 3.9024 0.29289 4.2929C-0.09763 4.6834 -0.09763 5.3166 0.29289 5.7071L3.29289 8.7071C3.68342 9.0976 4.3166 9.0976 4.7071 8.7071L11.7071 1.70711C12.0976 1.31658 12.0976 0.68342 11.7071 0.29289C11.3166 -0.09763 10.6834 -0.09763 10.2929 0.29289L4 6.5858L1.70711 4.2929z" fill="%23fff"/></svg>');
+  position: relative;
+  top: 0.125rem;
+  color: white;
+}
+.quality.card label:hover input:not(:checked):before {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #f6775e;
+  border-radius: 50%;
+  border: 0.75rem solid white;
+}
+.rate.card {
+  margin-top: 1.5rem;
+  margin-left: 5rem;
+  width: 15rem;
+  height: 10rem;
+  background-color: #983e8c;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+.rate.card::after {
+  position: absolute;
+  z-index: -1;
+  left: -10rem;
+  bottom: -8rem;
+  width: 16rem;
+  height: 16rem;
+}
+.progressbar {
+  height: 1rem;
+}
+.rate.card .progressbar button {
+  width: 3rem;
+  height: 0.175rem;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  border-radius: 0.125rem;
+}
+.rate.card .progressbar button.grayed {
+  width: 3rem;
+  height: 0.175rem;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  border-radius: 0.125rem;
+  background-color: #bd61b1;
+}
+/* increase clickable area for a little better navigation */
+.rate.card .progressbar button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+  height: 2rem;
+}
+/* looks like shit */
+.rate.card .progressbar button:hover {
+  border: 0.25rem solid rgba(254, 255, 255, 0.543);
+}
+.rate.card fieldset {
+  opacity: 1;
+  border: none;
+  display: flex;
+  gap: 0.125rem;
+  align-items: center;
+  transition: all 1000ms linear;
+}
+.rate.card fieldset.hidden,
+.rate.card div.hidden {
+  opacity: 0;
+}
+
+.rate.card fieldset legend {
+  margin: 1.5rem 0;
+}
+.rate.card fieldset input {
+  appearance: none;
+}
+.rate.card fieldset label {
+  display: inline-flex;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.rate.card fieldset label:hover {
+  background-color: #be60b3;
+}
+.rate.card fieldset input:checked + label {
+  transition: 500ms background-color ease-in-out;
+  background-color: white;
+  color: #983e8c;
+}
+.star-rate.card {
+  margin-top: 1.5rem;
+  margin-left: 4rem;
+  width: 16rem;
+  height: 12rem;
+  background-color: #d8667d;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.star-rate.card::after {
+  z-index: -1;
+  right: -2rem;
+  top: -3rem;
+  width: 8rem;
+  height: 8rem;
+}
+.star-rate.card h3 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.star-rate.card input {
+  appearance: none;
+}
+.star-rate.card .star-rating {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row-reverse; /*reverse direction
+   so i can use ~ sibling selector an make the selection of the 
+   previous stars so much easier*/
+}
+.star-rate.card label {
+  fill: transparent;
+  stroke: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.star-rate.card input:checked ~ label,
+.star-rate.card input:hover ~ label {
+  fill: white;
+}
+.star-rate.card input:hover + label:after {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #e07087;
+  z-index: -1;
+}
+
+.checkbox.card {
+  margin-top: 1.5rem;
+  margin-left: 4rem;
+  width: 14rem;
+  height: 16rem;
+  background-color: #7e51cf;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.checkbox.card::after {
+  z-index: -1;
+  right: 5rem;
+  top: -2rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.checkbox.card fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+.checkbox.card legend {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+.checkbox.card label {
+  font-size: 0.625rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.checkbox.card input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  appearance: none;
+  border: 1px solid white;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox.card input[type="checkbox"]:checked {
+  background-color: white;
+}
+.checkbox.card input[type="checkbox"]:checked:after {
+  content: url('data:image/svg+xml,<svg width="1rem" height="1rem" viewBox="0 -1.5 12 12" id="meteor-icon-kit__regular-checkmark-xs" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.70711 4.2929C1.31658 3.9024 0.68342 3.9024 0.29289 4.2929C-0.09763 4.6834 -0.09763 5.3166 0.29289 5.7071L3.29289 8.7071C3.68342 9.0976 4.3166 9.0976 4.7071 8.7071L11.7071 1.70711C12.0976 1.31658 12.0976 0.68342 11.7071 0.29289C11.3166 -0.09763 10.6834 -0.09763 10.2929 0.29289L4 6.5858L1.70711 4.2929z" fill="%237e51cf"/></svg>');
+}

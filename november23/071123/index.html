@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>iCodeThis 07.11.23 Custom Form Elements</title>
+  </head>
+  <body>
+    <div class="quality card">
+      <label for="audio">
+        <input type="radio" name="quality" id="audio" value="audio" checked />
+        Audio
+      </label>
+      <label for="audio">
+        <input type="radio" name="quality" id="video" value="Video" />
+        Video
+      </label>
+      <label for="audio">
+        <input type="radio" name="quality" id="perfomance" value="Perfomance" />
+        Perfomance
+      </label>
+    </div>
+    <div class="star-rate card">
+      <h3>
+        How do you rate our <br />
+        services
+      </h3>
+      <div class="star-rating">
+        <input type="radio" name="star-rating" id="star-rating-5" value="1" />
+        <label for="star-rating-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>star</title>
+            <path
+              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            />
+          </svg>
+        </label>
+        <input type="radio" name="star-rating" id="star-rating-4" value="2" />
+        <label for="star-rating-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>star</title>
+            <path
+              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            />
+          </svg>
+        </label>
+        <input type="radio" name="star-rating" id="star-rating-3" value="3" />
+        <label for="star-rating-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>star</title>
+            <path
+              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            />
+          </svg>
+        </label>
+        <input type="radio" name="star-rating" id="star-rating-2" value="4" />
+        <label for="star-rating-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>star</title>
+            <path
+              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            />
+          </svg>
+        </label>
+        <input type="radio" name="star-rating" id="star-rating-1" value="5" />
+        <label for="star-rating-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>star</title>
+            <path
+              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+            />
+          </svg>
+        </label>
+      </div>
+    </div>
+    <div class="rate card">
+      <div class="progressbar">
+        <button id="question-1" class="progress-point"></button>
+        <button id="question-2" class="progress-point grayed"></button>
+      </div>
+      <fieldset class="" id="exp-rating">
+        <legend>Rate your experience</legend>
+        <input type="radio" name="exp-rating" id="rating-1" value="1" />
+        <label for="rating-1">1</label>
+        <input type="radio" name="exp-rating" id="rating-2" value="2" />
+        <label for="rating-2">2</label>
+        <input type="radio" name="exp-rating" id="rating-3" value="3" />
+        <label for="rating-3">3</label>
+        <input type="radio" name="exp-rating" id="rating-4" value="4" />
+        <label for="rating-4">4</label>
+        <input type="radio" name="exp-rating" id="rating-5" value="5" />
+        <label for="rating-5">5</label>
+      </fieldset>
+      <fieldset class="hidden" id="qty-rating">
+        <legend>Rate the quality of the service</legend>
+        <input type="radio" name="qty-rating" id="qtyrating-1" value="1" />
+        <label for="qtyrating-1">1</label>
+        <input type="radio" name="qty-rating" id="qtyrating-2" value="2" />
+        <label for="qtyrating-2">2</label>
+        <input type="radio" name="qty-rating" id="qtyrating-3" value="3" />
+        <label for="qtyrating-3">3</label>
+        <input type="radio" name="qty-rating" id="qtyrating-4" value="4" />
+        <label for="qtyrating-4">4</label>
+        <input type="radio" name="qty-rating" id="qtyrating-5" value="5" />
+        <label for="qtyrating-5">5</label>
+      </fieldset>
+      <div class="hidden" id="end-card"><h3>thank you for answering</h3></div>
+    </div>
+    <div class="checkbox card">
+      <fieldset>
+        <legend>
+          What didn't worked <br />
+          properly?
+        </legend>
+        <label for="video">
+          <input type="checkbox" name="video" id="video" />
+          Video was blurry
+        </label>
+        <label for="sound">
+          <input type="checkbox" name="sound" id="sound" />
+          Sound wasn't working
+        </label>
+        <label for="app">
+          <input type="checkbox" name="app" id="app" />
+          App was crashing
+        </label>
+        <label for="else">
+          <input type="checkbox" name="else" id="else" />
+          Else
+        </label>
+      </fieldset>
+    </div>
+  </body>
+</html>
