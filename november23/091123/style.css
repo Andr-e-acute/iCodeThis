@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: #1f2123;
+  --sec-bg-color: #26282a;
+  --font-color: #fdfefe;
+  --gray-color: #606264;
+  --red-butt-color: #f2735e;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--main-bg-color);
+  color: var(--font-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ul.followers {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  background-color: var(--sec-bg-color);
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem 2rem 2rem;
+  box-shadow: 0px 10px 50px 20px #000;
+}
+li.profile-card {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 2rem 2rem 2rem;
+  column-gap: 0.5rem;
+  background-color: var(--color);
+}
+li.profile-card > * {
+  padding: 0.25rem;
+}
+li.profile-card .img-wrapper {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  position: relative;
+}
+li.profile-card .img-wrapper img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 0 1rem 1rem 1rem;
+}
+li.profile-card .img-wrapper:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 0.825rem;
+  height: 0.825rem;
+  background-color: var(--dot-color);
+  z-index: 1;
+  border-radius: 50%;
+  border: 0.25rem solid var(--sec-bg-color);
+}
+.profile-card .name {
+  padding-bottom: 0;
+}
+.profile-card .profession {
+  padding-top: 0;
+  color: var(--gray-color);
+  font-size: 0.875rem;
+}
+.profile-card .interact-butts button {
+  display: inline-flex;
+  align-items: end;
+  gap: 0.25rem;
+  color: var(--font-color);
+  font-size: 0.75rem;
+  font-weight: 200;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--sec-bg-color);
+  border: 0.0625rem solid var(--red-butt-color);
+}
+.profile-card .interact-butts button.message {
+  border-radius: 1.25rem 0 0 1.25rem;
+}
+.profile-card .interact-butts button.follow {
+  color: black;
+  background-color: var(--red-butt-color);
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+.profile-card .interact-butts button.message::before {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fdfefe"><path d="M12,3C6.5,3 2,6.58 2,11C2.05,13.15 3.06,15.17 4.75,16.5C4.75,17.1 4.33,18.67 2,21C4.37,20.89 6.64,20 8.47,18.5C9.61,18.83 10.81,19 12,19C17.5,19 22,15.42 22,11C22,6.58 17.5,3 12,3M12,17C7.58,17 4,14.31 4,11C4,7.69 7.58,5 12,5C16.42,5 20,7.69 20,11C20,14.31 16.42,17 12,17Z" /></svg>');
+  display: inline-block;
+
+  height: 1rem;
+  width: 1rem;
+}
+.profile-card .interact-butts button.follow::before {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000" ><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>');
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+}
+li.divider {
+  list-style: none;
+  border-top: 1px solid #6062646e;
+}
