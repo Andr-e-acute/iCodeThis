@@ -8,6 +8,190 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap");
 
 :root {
-  --main-bg-color: #26282a;
-  font-size: 12px;
+  --main-bg-color: #f1f4ff;
+  --bg-gradient: linear-gradient(90deg, #44b6df, #79e5ea);
+  --gray-font: #c6c8ca;
+  --contrast-color: #45b6d2;
+}
+body {
+  min-height: 100vh;
+  background-color: #f1f4ff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+.screen {
+  background-color: #f1f4ff;
+  box-shadow: 0 0 10px 5px gray;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  width: 65vw;
+  min-width: 250px;
+}
+.screen .info-bar {
+  color: #fcfefe;
+}
+.screen .info-bar .blue-banner {
+  position: absolute;
+  width: 100%;
+  height: 15vh;
+  background: var(--bg-gradient);
+  z-index: -1;
+  overflow: hidden;
+}
+.screen .info-bar .blue-banner::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -60%;
+  border-radius: 50%;
+  display: block;
+  height: 100vh;
+  width: 150vw;
+  background: #79e5ea33;
+}
+.screen .info-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.screen .info-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.screen .info-bar svg {
+  width: 1.5rem;
+  fill: #fff;
+}
+.screen .info-bar > div {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.screen .info-bar > div .count {
+  padding-bottom: 0.125rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.screen .info-bar #timer {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.screen .info-bar .progress-circle {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+}
+.screen .info-bar .progress-circle svg {
+  width: 2rem;
+  height: 2rem;
+}
+.screen .info-bar .progress-circle .wrapper {
+  position: absolute;
+  display: flex;
+
+  width: 2rem;
+  height: 2rem;
+  top: 0;
+}
+.screen .info-bar .progress-circle .wrapper:after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: 13%;
+  left: 13%;
+  right: 13%;
+  bottom: 13%;
+
+  background: conic-gradient(#fff var(--progress), transparent 0%);
+  border-radius: 50%;
+  z-index: -1;
+}
+.questioncard {
+  background-color: #fff;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  box-shadow: 3px 3px 10px 0px rgba(128, 128, 128, 0.409);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.questioncard .question-counter {
+  color: var(--gray-font);
+}
+.questioncard .question {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.questioncard fieldset {
+  border: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.questioncard fieldset legend {
+  padding: 1rem 0rem;
+  color: var(--gray-font);
+}
+.questioncard fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.375rem;
+}
+.questioncard fieldset label:hover {
+  color: #fff;
+  background: var(--bg-gradient);
+  border-radius: 0.75rem;
+}
+.questioncard input {
+  appearance: none;
+}
+.questioncard fieldset label > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+.interact {
+  margin: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.interact button {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--contrast-color);
+
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+}
+.interact button#skip-butt,
+.interact button#answer-butt:hover {
+  color: var(--contrast-color);
+  background-color: inherit;
+}
+.interact button#skip-butt:hover,
+.interact button#answer-butt {
+  color: #fff;
+  background-color: var(--contrast-color);
+}
+.interact button#skip-butt:hover,
+.interact button#answer-butt:hover {
+  box-shadow: inset 0 0 0px 3px paleturquoise;
 }
