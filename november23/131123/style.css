@@ -9,15 +9,147 @@
 
 :root {
   --font-color: #f1f4ff;
-  --gray-font: #757275;
+  --gray-font: #909090;
   --blue-font: #2f87d5;
+  --white: #fff;
 }
 body {
   min-height: 100vh;
-  background: linear-gradient(90deg, #3c54a0, #537bd5);
+  background: #139ee2;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.screen .container-header {
+  background-image: linear-gradient(90deg, #4d6871aa, #29313caa),
+    url('data:image/svg+xml,<svg id="visual" viewBox="0 0 900 600"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 151L37.5 143C75 135 150 119 225 109C300 99 375 95 450 81C525 67 600 43 675 38C750 33 825 47 862.5 54L900 61L900 0L862.5 0C825 0 750 0 675 0C600 0 525 0 450 0C375 0 300 0 225 0C150 0 75 0 37.5 0L0 0Z" fill="%2357646f"></path><path d="M0 181L37.5 197C75 213 150 245 225 231C300 217 375 157 450 123C525 89 600 81 675 89C750 97 825 121 862.5 133L900 145L900 59L862.5 52C825 45 750 31 675 36C600 41 525 65 450 79C375 93 300 97 225 107C150 117 75 133 37.5 141L0 149Z" fill="%233f4c56"></path><path d="M0 499L37.5 475C75 451 150 403 225 375C300 347 375 339 450 380C525 421 600 511 675 496C750 481 825 361 862.5 301L900 241L900 143L862.5 131C825 119 750 95 675 87C600 79 525 87 450 121C375 155 300 215 225 229C150 243 75 211 37.5 195L0 179Z" fill="%23303a44"></path><path d="M0 601L37.5 601C75 601 150 601 225 601C300 601 375 601 450 601C525 601 600 601 675 601C750 601 825 601 862.5 601L900 601L900 239L862.5 299C825 359 750 479 675 494C600 509 525 419 450 378C375 337 300 345 225 373C150 401 75 449 37.5 473L0 497Z" fill="%23272f37"></path></svg>');
+  background-size: cover;
+  padding: 1rem 1rem 0rem 1rem;
+  color: var(--white);
+}
+.container-header .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar button {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+}
+.navbar button svg {
+  height: 1.25rem;
+  fill: var(--white);
+}
+.container-header .artist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.artist img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  box-shadow: 0 0 10px 3px #283338;
+}
+.artist h1 {
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+.artist p {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+.container-header .months {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.months .month {
+  text-transform: uppercase;
+  color: var(--gray-font);
+  padding-bottom: 0.375rem;
+}
+.months .month.active {
+  color: var(--white);
+  border-bottom: 3px solid red;
+}
+.screen .schedule {
+  background: var(--white);
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+.schedule .event {
+  padding-bottom: 1.25rem;
+  display: flex;
+  align-items: start;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.event .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.event .dot:before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 3rem;
+  top: 0.75rem;
+  width: 1px;
+  background-color: #e8e8e8;
+}
+.event .event-details h4 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.825rem;
+}
+.event-details p {
+  font-size: 0.75rem;
+}
+.event-details .tags svg {
+  fill: var(--gray-font);
+  width: 0.75rem;
+}
+.event-details .tags {
+  height: 1rem;
+  font-size: 0.75rem;
+  color: var(--gray-font);
+  display: flex;
+  align-items: start;
+  column-gap: 1rem;
+}
+.event > button {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.625rem;
+  color: var(--white);
+  fill: var(--white);
+  background: linear-gradient(90deg, #507f8e, #313440);
+}
+.event > button svg {
+  transform: rotate(-45deg);
+  fill: inherit;
+  width: 0.75rem;
+}
+.event > button.soldOut {
+  background: #e8e8e8;
+  color: var(--gray-font);
+  fill: var(--gray-font);
+}
+.schedule svg {
+  width: 1rem;
 }
