@@ -10,7 +10,7 @@
   --sec-font-color: #456876;
   --gray-font: #9da09f;
   --contrast-blue: #1a8ee2;
-  --contrast-gray: #fafafa;
+  --contrast-gray: #f2f4f3;
 }
 body {
   background-color: #f6f6f6;
@@ -23,5 +23,118 @@ body {
 }
 .window {
   background-color: #fff;
-  box-shadow: 0px 0px 10px 0 #d9eef5;
+  box-shadow: 5px 10px 30px 10px rgba(144, 219, 244, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.window .close {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  display: block;
+  background-color: transparent;
+  padding: 0.5rem;
+  border: none;
+  color: var(--gray-font);
+  font-size: 1rem;
+}
+.window h1 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.window .data-container {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.data-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.data-container > div h3 {
+  color: var(--sec-font-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.data-container > div p {
+  font-size: 0.75rem;
+  color: var(--gray-font);
+  font-weight: 600;
+}
+.data-container .points {
+  --percent: calc(10 / 30 * 100%);
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(closest-side, #fff 84%, transparent 85% 100%),
+    conic-gradient(var(--contrast-blue) var(--percent), var(--contrast-gray) 0);
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+}
+.points {
+  font-weight: 600;
+  font-size: 1.375rem;
+}
+.points > span {
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+h4 {
+  align-self: start;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--sec-font-color);
+}
+.award-container {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.award-container .award-card {
+  width: 33%;
+  padding: 1rem;
+  background-color: var(--contrast-gray);
+}
+.award-card:nth-child(2) svg {
+  fill: rgb(141, 18, 18);
+}
+.award-card:nth-child(3) svg {
+  fill: var(--gray-font);
+}
+.progress {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.progress h5 {
+  font-weight: 500;
+  font-size: 0.625rem;
+  color: var(--sec-font-color);
+}
+.progress > div {
+  --percent: 45%;
+  width: 100%;
+  height: 0.625rem;
+  background-color: var(--contrast-gray);
+  border-radius: 1rem;
+  position: relative;
+}
+.progress > div::after {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  height: 100%;
+  width: var(--percent);
+  background-color: var(--contrast-blue);
 }
