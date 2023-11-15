@@ -5,3 +5,106 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --main-bg: #2f3750;
+  --blue-bg: #3e6ede;
+  --font-bg: #fcf9fe;
+  --sec-font-bg: #d6dae5e5;
+  --low-contrast-color: #618bf0;
+}
+body {
+  background-color: var(--main-bg);
+  font-family: sans-serif;
+  color: var(--font-bg);
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: min-content min-content;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--blue-bg);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 18rem;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+}
+.card h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.25rem 0;
+}
+.card p {
+  color: var(--sec-font-bg);
+  font-size: 0.625rem;
+  font-weight: 400;
+  padding: 0.25rem 0;
+}
+.card a {
+  color: var(--sec-font-bg);
+  font-size: 0.625rem;
+}
+.card button.expand {
+  display: flex;
+  align-items: center;
+  background-color: inherit;
+  border: none;
+}
+.card button.expand:after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fcf9fe"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>');
+  display: block;
+  width: 1.25rem;
+  fill: var(--font-bg);
+}
+
+.card.double {
+  grid-row: 1/-1;
+  grid-column: -2/-1;
+}
+.card.places {
+  display: flex;
+  flex-direction: row;
+}
+.card.places button.expand:after {
+  width: 2rem;
+}
+.card.addresses .link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0rem;
+}
+.card.addresses svg {
+  width: 1.25rem;
+  display: block;
+  fill: var(--sec-font-bg);
+}
+.stalagmites {
+  height: 8rem;
+}
+.card.visited h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.card.visited p {
+  margin-bottom: 2rem;
+}
+.card.visited button {
+  padding: 0.375rem 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--sec-font-bg);
+  background-color: var(--low-contrast-color);
+  box-shadow: 0px 0px 10px -3px var(--main-bg);
+}
+@media screen and (max-width: 600px) {
+  body {
+    grid-template-columns: min-content;
+  }
+}
