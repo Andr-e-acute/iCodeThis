@@ -7,3 +7,107 @@
 }
 :root {
 }
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #68c4e2, #074053);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.screen {
+  background: #f2fbfa;
+  border-radius: 1rem;
+}
+.screen nav {
+  border-radius: 1rem 1rem 0 0;
+  color: #fdfbfd;
+  fill: #fdfbfd;
+  background-image: url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-color: #3085a4;
+  background-blend-mode: soft-light;
+}
+.screen nav header {
+  padding: 2rem 1rem 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.screen header svg {
+  height: 2rem;
+}
+.screen header h1 {
+  font-size: 1rem;
+}
+.screen nav ul {
+  padding: 0.25rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-around;
+  background: #1a414eaa;
+}
+.screen nav ul li {
+  font-size: 0.75rem;
+  list-style: none;
+}
+.screen nav ul li.active {
+  font-weight: 700;
+}
+.scrollWrapper {
+  overflow: auto;
+  max-height: 60vh;
+  border-radius: 0 0 1rem 1rem;
+}
+/* bad idea? */
+.scrollWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  column-count: 2;
+  column-gap: 0px;
+  background-color: #cee6e0;
+  padding: 1rem 0.5rem;
+}
+main .book-card {
+  position: relative;
+  background-color: #fff;
+  width: 8rem;
+  margin: 0.25rem;
+  break-inside: avoid;
+}
+main .book-card img {
+  width: 100%;
+  object-fit: cover;
+}
+.book-card .book-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  text-align: center;
+}
+.book-card .book-info h3 {
+  font-size: 0.5rem;
+}
+.book-card .book-info p {
+  font-size: 0.5rem;
+}
+.book-info .progressbar {
+  background-color: #d7f4f4;
+  border-radius: 0.125rem;
+  height: 0.25rem;
+  width: 100%;
+  position: relative;
+}
+.progressbar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #49c9c9;
+  border-radius: 0.125rem;
+  height: 100%;
+  width: var(--progress);
+}
