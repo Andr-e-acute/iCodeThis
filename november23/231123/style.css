@@ -15,3 +15,64 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: #212430;
 }
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  --contrast-color: #fbb22a;
+}
+.screen .profile {
+  width: 4rem;
+  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--contrast-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: 2px solid var(--contrast-color);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.screen .account-menu {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.account-menu h2,
+.account-menu > div {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.account-menu .container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.account-menu .container .change {
+  color: var(--contrast-color);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.account-menu > button {
+  color: #fff;
+  background-color: var(--contrast-color);
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+.account-menu > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.account-menu svg {
+  width: 1.5rem;
+}
