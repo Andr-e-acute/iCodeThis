@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: linear-gradient(120deg, #fa9666, #fdc773);
+}
+
+.screen {
+  width: 90vw;
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  display: grid;
+
+  grid-template-rows: min-content 1fr min-content;
+}
+.screen nav {
+  background-color: #23304c;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.screen nav > * {
+  color: #d0e0ef;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  font-size: 0.625rem;
+  font-family: inherit;
+  padding: 0.5rem 0;
+}
+.screen nav button {
+  background-color: #fa6544;
+  border-radius: 0.125rem;
+  padding: 0.5rem 1rem;
+}
+.screen main {
+  color: #2d3351;
+  padding: 3rem;
+  padding-bottom: 10rem;
+  background-image: url(https://images.unsplash.com/photo-1543353071-10c8ba85a904?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: 180%;
+  background-position: 60% 70%;
+  background-repeat: none;
+}
+
+.screen main h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.screen main p {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.screen main > div {
+  box-shadow: 0 15px 10px -10px rgb(138, 123, 123);
+  display: inline-flex;
+}
+.screen main > div * {
+  border: none;
+  padding: 0.75rem;
+}
+.screen main > div input {
+  font-size: 0.625rem;
+  width: 16rem;
+}
+.screen main > div button {
+  color: #fee9e4ce;
+  background-color: #fa6447;
+}
+.screen footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+  padding: 0.5rem;
+}
+.screen footer a {
+  color: #969899;
+  text-decoration: none;
+  font-size: 0.5rem;
+}
+.screen footer .legal-links {
+  justify-self: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.screen footer .legal-links a {
+  display: inline-flex;
+  align-items: center;
+}
+.screen footer .legal-links a:not(:first-of-type)::before {
+  content: "·";
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+.screen footer > div {
+  font-size: 0.5rem;
+  color: #969899;
+}
+.screen footer .social {
+  justify-self: right;
+}
+.screen footer .social svg {
+  fill: #969899;
+  padding: 0 0.5rem;
+  height: 1rem;
+  text-decoration: none;
+}
