@@ -12,3 +12,4 @@ onOffButt.addEventListener("click", () => {
   console.log(onOffButt);
   lampCard.classList.toggle("off");
 });
+g
