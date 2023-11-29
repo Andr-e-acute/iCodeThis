@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>iCodeThis 29.11.23 Pricing Saas</title>
+  </head>
+  <body>
+    <div class="plan-flag">
+      <p>Your current plan:</p>
+      <h4>Starter Trial • 500 MAUs</h4>
+    </div>
+    <h1>Choose a plan</h1>
+    <div class="slider-container">
+      <p>Billed monthly</p>
+      <label class="switch">
+        <input type="checkbox" name="" id="billedButt" />
+        <span class="slider"></span>
+      </label>
+      <p>Billed annualy</p>
+    </div>
+    <div class="card-container">
+      <div class="card active" id="starter">
+        <h3>Starter</h3>
+        <h2>$19</h2>
+        <ul>
+          <li>500 MAUs</li>
+          <li>3 Projects</li>
+          <li>Unlimited guides</li>
+          <li>Unlimited flows</li>
+          <li>Unlimited branded themes</li>
+          <li>Email support</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+      <div class="card active" id="pro">
+        <h3>Pro</h3>
+        <h2 data-price="99" data-period="month">$99 <span>/month</span></h2>
+        <div class="dropdown">
+          <select name="" id="maus">
+            <option value="49">1000 MAUs</option>
+            <option value="99" selected>2500 MAUs</option>
+            <option value="179">5000 MAUs</option>
+          </select>
+          <label for="maus"> Monthly active user's</label>
+        </div>
+        <ul>
+          <li>all starter features</li>
+          <li>Unlimited projects</li>
+          <li>Unlimited fully customizable themes</li>
+          <li>A dedicated Customer Success Manager</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+      <div class="card active" id="enterprise">
+        <h3>Starter</h3>
+        <h2>Let's Talk</h2>
+        <ul>
+          <li>all Pro features</li>
+          <li>Unlimited MAUs</li>
+          <li>dedicated environment</li>
+          <li>enterprise account administration</li>
+          <li>Premium support and services</li>
+        </ul>
+        <button>Contact Us</button>
+      </div>
+    </div>
+  </body>
+</html>
