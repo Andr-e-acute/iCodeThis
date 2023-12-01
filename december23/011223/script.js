@@ -8,7 +8,7 @@ const minDisplay = document.querySelector(
 const secDisplay = document.querySelector(
   ".dateTime-container>.seconds>.amount"
 );
-const secLeft = getSecLeft();
+let secLeft = getSecLeft();
 
 function getSecLeft() {
   const now = new Date();
@@ -26,6 +26,8 @@ function timer() {
   hoursDisplay.innerHTML = (hours % 60).toString().padStart(2, "0");
   minDisplay.innerHTML = (minutes % 60).toString().padStart(2, "0");
   secDisplay.innerHTML = (secLeft % 60).toString().padStart(2, "0");
+  secLeft--;
 }
+
 timer();
 setInterval(timer, 1000);
