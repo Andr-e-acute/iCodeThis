@@ -1,0 +1,107 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #217691;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.screen {
+  width: 80vw;
+  height: 80vh;
+  background-color: #eff3f6;
+  border-radius: 0.5rem;
+  border: 2px solid #6c6c6c;
+  overflow: hidden;
+}
+.messagebar {
+  background-color: #fbd6cf;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  text-align: center;
+  height: 2rem;
+  padding: 0 2rem;
+  font-size: 0.75rem;
+}
+.messagebar.hidden {
+  display: none;
+}
+.messagebar .close {
+  justify-self: self-end;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.navbar {
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+.navbar svg {
+  height: 1rem;
+}
+.navbar > *,
+.navbar .left label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar .left label {
+  background-color: #eff3f6;
+  border: 2px solid #eff3f6;
+  padding: 0 0.5rem;
+  height: 2rem;
+  border-radius: 2rem;
+}
+.navbar input {
+  border: none;
+  background-color: transparent;
+}
+.navbar input::placeholder {
+  font-size: 0.7rem;
+  color: #a5a9ae;
+}
+.navbar input:focus {
+  outline: none;
+}
+.navbar .left label:focus-within {
+  border: 2px solid rgba(112, 112, 112, 0.301);
+}
+.navbar a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: inherit;
+}
+.navbar a:visited {
+  color: inherit;
+}
+.navbar a.cart {
+  position: relative;
+}
+.navbar a.cart:after {
+  content: var(--amount);
+  position: absolute;
+  right: -0.375rem;
+  top: -0.375rem;
+  background-color: red;
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  color: #fff;
+}
