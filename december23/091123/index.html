@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>iCodeThis 09.12.23 iCodeMas #09</title>
+  </head>
+  <body>
+    <div class="dropdown">
+      <select name="" id="order">
+        <option value="recent">Most recent</option>
+        <option value="recommended">Recommended</option>
+        <option value="popular">Popular</option>
+        <option value="lowToHigh">Price low to high</option>
+        <option value="highToLow">Price high to low</option>
+        <option value="sales">Sales</option>
+      </select>
+    </div>
+    <div class="custom-dropdown">
+      <button class="select-button">
+        <span class="selected-value">Most Recent</span>
+        <span class="arrow"></span>
+      </button>
+      <ul class="select-dropdown">
+        <li>
+          <input type="radio" id="recommended" name="order" />
+          <label for="recommended">Recommended</label>
+        </li>
+        <li>
+          <input type="radio" id="popular" name="order" />
+          <label for="popular">Popular</label>
+        </li>
+        <li>
+          <input type="radio" id="lowHigh" name="order" />
+          <label for="lowHigh">Price low to high</label>
+        </li>
+        <li>
+          <input type="radio" id="highLow" name="order" />
+          <label for="highLow">Price high to low</label>
+        </li>
+        <li>
+          <input type="radio" id="sales" name="order" />
+          <label for="sales">Sales</label>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
