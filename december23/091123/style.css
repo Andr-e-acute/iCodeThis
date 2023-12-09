@@ -40,19 +40,20 @@ body {
   font-size: 1rem;
   background-color: #e5e8ee;
   padding: 0.75rem 1rem;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   cursor: pointer;
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* needs to be an svg */
 .arrow {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid #000;
   transition: transform ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+}
+.arrow svg {
+  width: 1.5rem;
 }
 .select-dropdown {
   position: absolute;
@@ -60,20 +61,48 @@ body {
   width: 100%;
   background-color: #fff;
   border: 2px solid #caced194;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   padding: 0;
   margin-top: 0.25rem;
 
   transition: 0.5s ease;
+  transform-origin: 0 0%;
+  transform: scaleY(0);
+
+  visibility: hidden;
 }
-/* can be delete without selectors */
+.select-dropdown input[type="radio"] {
+  appearance: none;
+}
+
 .select-dropdown li {
-  padding: 0.75rem 1rem;
-  border: 1px solid red;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   position: relative;
   cursor: pointer;
   display: flex;
-  gap: 1rem;
-  align-items: center;
+}
+.select-dropdown li label {
+  padding: 0.75rem 1rem;
+  width: 100%;
+
+  border-radius: 2rem;
+}
+.select-dropdown li:hover {
+  background-color: #eff3f6;
+}
+
+.select-dropdown input:focus ~ label,
+.select-dropdown input:checked ~ label {
+  background-color: #e5e8ee;
+  border: 2px solid #caced194;
+}
+
+.custom-dropdown.active .arrow {
+  transform: rotateX(180deg);
+}
+
+.custom-dropdown.active .select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
 }
