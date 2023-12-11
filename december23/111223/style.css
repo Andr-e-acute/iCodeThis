@@ -5,3 +5,179 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Add CSS here */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #217691;
+}
+
+.window {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1rem 4rem;
+}
+
+.window img.hat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 7rem;
+  transform: translate(-30%, -40%) rotate(-10deg);
+  filter: drop-shadow(20px 30px 40px rgba(240, 93, 19, 0.204));
+}
+
+.window button.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
+  display: inline-flex;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.window h1 {
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+
+.window p {
+  font-size: 0.625rem;
+  max-width: 60ch;
+  color: #444;
+}
+
+.window form {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.window form .amount-container {
+  display: flex;
+}
+.window form .amount-container button {
+  appearance: none;
+  width: 1.5rem;
+  border: 2px solid #f2f2f2;
+  background-color: #fff;
+  font-size: 1.25rem;
+}
+.window form .amount-container button#dec-amount:hover,
+.window form .amount-container button#inc-amount:hover {
+  border: 2px solid #bbb;
+}
+.window form .amount-container button#dec-amount {
+  border-right: none;
+}
+
+.window form .amount-container button#inc-amount {
+  border-left: none;
+}
+.window form .amount-container fieldset {
+  border: none;
+}
+.window form .amount-container fieldset:invalid {
+  border: 2px solid red;
+}
+.window form .amount-container fieldset:invalid .gift-amount {
+  border: none;
+}
+.window form .gift-amount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border: 2px solid #f2f2f2;
+  padding: 0.25rem 0.5rem;
+}
+.window form .gift-amount input {
+  appearance: none;
+  -moz-appearance: textfield;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+  width: 3ch;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.window form label.gift-amount input:focus {
+  outline: none;
+}
+.window form label.gift-amount:focus-within,
+.window form label.gift-amount:hover {
+  border: 2px solid #bbb;
+}
+.window form .error-message {
+  padding: 0.5rem;
+}
+.window form .error-message.active {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border: 2px solid red;
+  background-color: #fffef1;
+  font-weight: 600;
+  margin: 0.25rem;
+}
+.window form .preselect-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-bottom: 1rem;
+}
+.window form .preselect-container button {
+  background-color: inherit;
+  height: 1.75rem;
+  border-radius: none;
+  border: 1px solid #f2f2f2;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+.window form .preselect-container button:hover {
+  border: 2px solid #bbb;
+}
+.window form > button#addCart {
+  background-color: #287691;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.625rem 1rem;
+  margin-bottom: 2rem;
+  color: #eee;
+  font-size: 0.625rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.window form > button#addCart svg {
+  height: 0.75rem;
+  fill: #eee;
+}

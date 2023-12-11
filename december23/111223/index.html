@@ -4,7 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>iCodeThis 11.12.23 iCodeMas #11</title>
   </head>
-  <body></body>
+
+  <body>
+    <div class="window">
+      <img
+        class="hat"
+        src="https://icodethis.com/images/iCodeMas/gift.png"
+        alt=""
+      />
+
+      <button class="close">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+          />
+        </svg>
+      </button>
+      <h1>Gift the joy of choice</h1>
+      <p>
+        Show them you care with a gift they'll love. With an online gift card.
+        they can choose from a wide selection Of products.
+      </p>
+      <form action="">
+        <div class="amount-container">
+          <button id="dec-amount">-</button>
+          <fieldset>
+            <label for="gift-amount" class="gift-amount"
+              >$<input
+                type="number"
+                id="gift-amount"
+                required
+                value="25"
+                min="10"
+                max="305"
+                step="5"
+              />
+            </label>
+          </fieldset>
+          <button id="inc-amount">+</button>
+        </div>
+        <div class="error-message"></div>
+        <div class="preselect-container">
+          <button class="amount-select">$<span>25</span></button>
+          <button class="amount-select">$<span>50</span></button>
+          <button class="amount-select">$<span>75</span></button>
+          <button class="amount-select">$<span>100</span></button>
+          <button class="amount-select">$<span>200</span></button>
+          <button class="amount-select">$<span>300</span></button>
+        </div>
+        <button id="addCart">
+          Add to cart
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M19 6H17C17 3.2 14.8 1 12 1S7 3.2 7 6H5C3.9 6 3 6.9 3 8V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V8C21 6.9 20.1 6 19 6M12 3C13.7 3 15 4.3 15 6H9C9 4.3 10.3 3 12 3M19 20H5V8H19V20M12 12C10.3 12 9 10.7 9 9H7C7 11.8 9.2 14 12 14S17 11.8 17 9H15C15 10.7 13.7 12 12 12Z"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
