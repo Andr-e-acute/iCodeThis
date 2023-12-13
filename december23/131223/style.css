@@ -1,0 +1,146 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #9ca6b0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 6rem 0;
+}
+svg {
+  width: 1rem;
+  height: 1rem;
+}
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.chat-window.hidde {
+  display: none;
+}
+.chat-window .header {
+  background-color: #277492;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.chat-window .header h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.chat-window .header p {
+  font-size: 0.625rem;
+  color: #dededec5;
+  font-weight: 400;
+  max-width: 42ch;
+  text-align: center;
+}
+.chat-window .chat {
+  height: 12rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem 1rem;
+  overflow: auto;
+  align-items: end;
+}
+
+.chat-window .chat > div.santa img {
+  width: 2.5rem;
+  height: 2.5rem;
+  align-self: end;
+}
+.chat-window .chat > div.santa .messages::after {
+  content: "Santa Klaus, 7Minutes ago";
+  font-size: 0.5rem;
+  color: #ccc;
+  padding: 0;
+  margin-top: -0.25rem;
+}
+.chat-window .chat > div {
+  gap: 0.5rem;
+  display: flex;
+}
+.chat-window .chat > div.santa {
+  justify-content: flex-start;
+}
+.chat-window .chat > div.user {
+  justify-content: flex-end;
+}
+.chat-window .chat .messages {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.625rem;
+  font-weight: 400;
+  gap: 0.5rem;
+}
+.chat-window .chat .user .messages {
+  justify-self: end;
+  align-items: flex-end;
+}
+.chat .user p {
+  padding: 0.5rem;
+  background: #e0f4fd;
+}
+.chat-window .chat .santa .messages {
+  justify-self: start;
+  align-items: flex-start;
+}
+.chat .santa p {
+  padding: 0.5rem;
+  background: #eff3f6;
+}
+
+.chat-window .text-input {
+  border-top: 2px solid #f1f2f6;
+  padding: 0.5rem 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr min-content;
+}
+.chat-window .text-input input {
+  border: none;
+  font-size: 0.65rem;
+}
+
+.chat-window .text-input button {
+  border: none;
+  background: inherit;
+}
+.chat-window .text-input button svg {
+  transform: rotate(-40deg);
+  fill: #277492;
+}
+button.open-chat {
+  fill: #fff;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  background-color: #277492;
+  border: none;
+  top: 1rem;
+  left: 7.5rem;
+  align-self: center;
+  aspect-ratio: 1/1;
+}
