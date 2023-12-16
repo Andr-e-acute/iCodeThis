@@ -1,0 +1,7 @@
+.pageButt.num.selected {
+  background-color: red;
+}
+
+.page-nav > button.deactive {
+  background-color: red;
+}
