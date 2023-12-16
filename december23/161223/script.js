@@ -1,7 +1,9 @@
 const pageNumbers = document.getElementById("pagesNumbers");
 const nextButt = document.getElementById("next-butt");
 const prevButt = document.getElementById("prev-butt");
-const pageCount = 10;
+const goToModal = document.getElementById("goToModal");
+const pageCount = 16;
+
 let currentPage;
 let pageArr = [];
 
@@ -45,10 +47,14 @@ function createPageButt() {
   });
 }
 function appendGoTo(str) {
-  const pageNum = document.createElement("button");
-  pageNum.classList.add("pageButt", "goTo");
-  pageNum.textContent = str;
-  pageNumbers.appendChild(pageNum);
+  const goTo = document.createElement("button");
+  goTo.classList.add("pageButt", "goTo");
+  goTo.textContent = str;
+  pageNumbers.appendChild(goTo);
+  goTo.addEventListener("click", () => {
+    goToModal.classList.remove("hidden");
+    goToModal.style.left = `${goTo.offsetLeft - goToModal.clientWidth / 2}px`;
+  });
 }
 function appendPageNum(i) {
   const pageNum = document.createElement("button");
@@ -56,12 +62,16 @@ function appendPageNum(i) {
   pageNum.dataset.index = i;
   pageNum.textContent = i;
   pageNumbers.appendChild(pageNum);
+  pageNum.addEventListener("click", () => {
+    setCurrentPage(i);
+  });
 }
 
 function setCurrentPage(page) {
   currentPage = page;
   createPageArr();
   createPageButt();
+  goToModal.classList.add("hidden");
 
   //   currentPage Number status
   document.querySelectorAll(".pageButt.num").forEach((butt) => {
@@ -86,10 +96,15 @@ function setCurrentPage(page) {
 }
 
 function nextPage() {
-  setCurrentPage(currentPage + 1);
+  setCurrentPage(Number(currentPage) + 1);
 }
 function prevPage() {
-  setCurrentPage(currentPage - 1);
+  setCurrentPage(Number(currentPage) - 1);
 }
-
-setCurrentPage(1);
+goToModal.addEventListener("submit", (e) => {
+  e.preventDefault();
+  goToModal.querySelector("input").setAttribute("max", `${pageCount}`);
+  const value = goToModal.querySelector("input").value;
+  setCurrentPage(Number(value));
+});
+setCurrentPage(7);
