@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>iCodeThis 02.12.23 iCodeMas #02</title>
+  </head>
+  <body>
+    <nav>
+      <div class="filters">
+        <div class="dropdown">
+          <select name="" id="order">
+            <option value="recent">Filers off</option>
+            <option value="recommended">Recommended</option>
+            <option value="popular">Popular</option>
+            <option value="lowToHigh">Price low to high</option>
+            <option value="highToLow">Price high to low</option>
+            <option value="sales">Sales</option>
+          </select>
+        </div>
+        <div class="custom-dropdown">
+          <button class="select-button">
+            <span class="selected-value">Most Recent</span>
+            <span class="arrow"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul class="select-dropdown">
+            <li>
+              <input type="radio" id="recommended" name="order" />
+              <label for="recommended">Recommended</label>
+            </li>
+            <li>
+              <input type="radio" id="popular" name="order" />
+              <label for="popular">Popular</label>
+            </li>
+            <li>
+              <input type="radio" id="lowHigh" name="order" />
+              <label for="lowHigh">Price low to high</label>
+            </li>
+            <li>
+              <input type="radio" id="highLow" name="order" />
+              <label for="highLow">Price high to low</label>
+            </li>
+            <li>
+              <input type="radio" id="sales" name="order" />
+              <label for="sales">Sales</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-selector">
+        <button data-gridColumn="1">|</button>
+        <button class="selected" data-gridColumn="2">||</button>
+        <button data-gridColumn="3">|||</button>
+        <button data-gridColumn="4">||||</button>
+      </div>
+    </nav>
+    <div class="card-container columns2">
+      <div class="product-details new">
+        <div class="img-container">
+          <img src="https://icodethis.com/images/iCodeMas/tree.png" alt="" />
+        </div>
+        <div class="description">
+          <div class="description-container">
+            <h3>Christmas Tree Decoration</h3>
+            <h2>$19.99</h2>
+            <p>
+              Perfect for adding a festive touch to any space. this miniature
+              tree brings the magic of Christmas right into your home. Crafted
+              with care, it's a delightful...
+            </p>
+          </div>
+          <button>Add to cart</button>
+        </div>
+      </div>
+      <div class="product-details reduced">
+        <div class="img-container">
+          <img src="https://icodethis.com/images/iCodeMas/gift.png" alt="" />
+        </div>
+        <div class="description">
+          <div class="description-container">
+            <h3>Gift Box</h3>
+            <h2>$9.99 <span class="reduced-price">$12.99</span></h2>
+            <p>
+              Unwrap the joy of the season with our elegant Gift Box decoration.
+              Adorned with festive details, it's not just a decoration; it•s a
+              promise of surprises and.
+            </p>
+          </div>
+          <button>Add to cart</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <div class="img-container">
+          <img
+            src="https://icodethis.com/images/iCodeMas/gingerbread_cookie.png"
+            alt=""
+          />
+        </div>
+        <div class="description">
+          <div class="description-container">
+            <h3>Gingerbread Man Cookie</h3>
+            <h2>$12.99</h2>
+            <p>
+              With its sugary charm and festive details, this decoration adds a
+              touch of whimsy to your home. Hang it on your tree or display it
+              in the kitchen for a delightful seasonal....
+            </p>
+          </div>
+          <button>Add to cart</button>
+        </div>
+      </div>
+
+      <div class="product-details">
+        <div class="img-container">
+          <img
+            src="https://icodethis.com/images/iCodeMas/snowflake.png"
+            alt=""
+          />
+        </div>
+        <div class="description">
+          <div class="description-container">
+            <h3>Snowflake Decoration</h3>
+            <h2>$4.99</h2>
+            <p>
+              Glistening with winter magic, this piece captures the delicate
+              beauty of snowflakes. Hang it by the window or sprinkle them
+              around your home for a...
+            </p>
+          </div>
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
