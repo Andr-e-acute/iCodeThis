@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iCodeThis 19.12.23 iCodeMas #19</title>
+  </head>
+  <body>
+    <form .payment>
+      <fieldset>
+        <legend>Contact Info</legend>
+        <label for="user-email">
+          <input required type="email" name="email" id="user-email" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Shipping Info</legend>
+        <label for="user-name">
+          Name
+          <input
+            required
+            type="text"
+            name="name"
+            id="user-name"
+            placeholder="Enter name"
+          />
+        </label>
+        <label for="user-country">
+          Country / Region
+          <input
+            required
+            type="text"
+            name="country"
+            id="user-country"
+            placeholder="Enter country"
+          />
+        </label>
+        <label for="user-address">
+          Address
+          <input
+            required
+            type="text"
+            name="address"
+            id="user-address"
+            placeholder="Enter Address"
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Payment info</legend>
+        <label for="card-payment">
+          <input type="radio" name="payment" id="card-payment" />
+          Card
+        </label>
+        <label for="cash-payment">
+          <input type="radio" name="payment" id="cash-payment" />
+          Cash at arrival
+        </label>
+        <label for="paypal-payment">
+          <input type="radio" name="payment" id="paypal-payment" />
+          Paypal
+        </label>
+        <div class="payment-form" id="credit-card-form">
+          <label for="user-card-number">
+            Card number
+            <input
+              required
+              type="text"
+              name="credit-card-number"
+              id="user-card"
+              placeholder="Enter Credit Card Number"
+            />
+          </label>
+          <label for="user-card-expiry">
+            Expiry date
+            <input
+              required
+              type="text"
+              name="credit-card-expiry"
+              id="user-card-expiry"
+              placeholder=" MM/YY"
+              pattern="\d{2}-\d{2}"
+            />
+          </label>
+          <label for="user-card-cvc">
+            CVC
+            <input
+              required
+              type="text"
+              name="credit-card-cvc"
+              id="user-card-cvc"
+              placeholder=" MM/YY"
+              pattern="\d{2}-\d{2}"
+            />
+          </label>
+        </div>
+        <div class="payment-form hidden" id="cash-form">
+          <label for="user-collector">
+            collector name
+            <input
+              required
+              type="text"
+              name="credit-card-number"
+              id="user-card"
+              placeholder="Enter Credit Card Number"
+            />
+          </label>
+          <label for="user-pickup-date">
+            Pickup date
+            <input required type="date" id="user-pickup-date" />
+          </label>
+        </div>
+        <div class="payment-form hidden" id="paypal-form">
+          <a href="#" target="_blank">connect to paypal</a>
+        </div>
+      </fieldset>
+      <button type="submit">Place Order</button>
+    </form>
+  </body>
+</html>
