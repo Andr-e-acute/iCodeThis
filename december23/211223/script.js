@@ -58,14 +58,15 @@ faqButt.addEventListener("click", () => {
   shopContent.classList.add("hidden");
 });
 
-faqExpandButt.forEach((butt) => {
-  butt.addEventListener("click", () => {
-    butt.closest(".expand-container").classList.toggle("closed");
-  });
-});
+// double event listener
+// faqExpandButt.forEach((butt) => {
+//   butt.addEventListener("click", (e) => {
+//     console.log(butt.closest(".expand-container").classList);
+//     butt.closest(".expand-container").classList.toggle("closed");
+//   });
+// });
 faqQuestions.forEach((expand) => {
-  console.log("test");
-  expand.addEventListener("click", () => {
+  expand.addEventListener("click", (e) => {
     expand.classList.toggle("closed");
   });
 });
