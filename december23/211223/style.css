@@ -1,0 +1,232 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #217691;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.screen {
+  width: 80vw;
+  height: 80vh;
+  background-color: #eff3f6;
+  border-radius: 0.5rem;
+  border: 2px solid #6c6c6c;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+
+.navbar svg {
+  height: 1rem;
+}
+
+.navbar > *,
+.navbar .left label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .left label {
+  background-color: #eff3f6;
+  border: 2px solid #eff3f6;
+  padding: 0 0.5rem;
+  height: 2rem;
+  border-radius: 2rem;
+}
+
+.navbar input {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar input::placeholder {
+  font-size: 0.7rem;
+  color: #a5a9ae;
+}
+
+.navbar input:focus {
+  outline: none;
+}
+
+.navbar .left label:focus-within {
+  border: 2px solid rgba(112, 112, 112, 0.301);
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.navbar a:visited {
+  color: inherit;
+}
+
+.navbar a.cart {
+  position: relative;
+}
+
+.navbar a.cart span#cart-counter {
+  position: absolute;
+  right: -0.375rem;
+  top: -0.375rem;
+  background-color: red;
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  color: #fff;
+}
+.navbar a.cart span#cart-counter.hidden {
+  display: none;
+}
+.navbar a.cart #cart-message {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 400;
+  right: 0;
+  bottom: -3rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: #d1e7f9;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.navbar a.cart #cart-message.hidden {
+  opacity: 0;
+  transition: opacity 800ms;
+}
+.navbar a.cart #cart-message-removed {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 400;
+  right: 0;
+  bottom: -3rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: #f9d1d1;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.navbar a.cart #cart-message-removed.hidden {
+  opacity: 0;
+  transition: opacity 800ms;
+}
+.container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 8rem);
+  gap: 1rem;
+}
+
+.container .img-container {
+  background-color: #f9fbfc;
+  position: relative;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container img {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  padding-bottom: 2rem;
+  object-fit: contain;
+}
+.card[style*="--tag:"] .img-container::before {
+  content: var(--tag);
+  background-color: var(--contrast-col, #d0e8fb);
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card.added .img-container::after {
+  content: "Added to Cart";
+  background-color: #d0e8fb;
+  font-weight: 600;
+  font-size: 0.5rem;
+  padding: 0.375rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.card:hover .img-container::after {
+  content: "Add to cart "
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 24 24" width="0.5rem"><path d="M19 6H17C17 3.2 14.8 1 12 1S7 3.2 7 6H5C3.9 6 3 6.9 3 8V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V8C21 6.9 20.1 6 19 6M12 3C13.7 3 15 4.3 15 6H9C9 4.3 10.3 3 12 3M19 20H5V8H19V20M12 12C10.3 12 9 10.7 9 " /></svg>');
+  background-color: var(--contrast-col, #d0e8fb);
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 0.375rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.card.added:hover .img-container::after {
+  content: "Remove from cart "
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 24 24" width="0.5rem"><path d="M19 6H17C17 3.2 14.8 1 12 1S7 3.2 7 6H5C3.9 6 3 6.9 3 8V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V8C21 6.9 20.1 6 19 6M12 3C13.7 3 15 4.3 15 6H9C9 4.3 10.3 3 12 3M19 20H5V8H19V20M12 12C10.3 12 9 10.7 9 " /></svg>');
+  background-color: var(--contrast-col, #d0e8fb);
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.5rem;
+  padding: 0.375rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.card h4 {
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+.card h3 {
+  font-size: 0.825rem;
+}
