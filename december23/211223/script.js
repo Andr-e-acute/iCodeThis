@@ -2,10 +2,21 @@ const cards = document.querySelectorAll(".card");
 const cartCounter = document.getElementById("cart-counter");
 const cartMessage = document.getElementById("cart-message");
 const cartMessageRemoved = document.getElementById("cart-message-removed");
+const shopButt = document.getElementById("shopButt");
+const faqButt = document.getElementById("faqButt");
+const shopContent = document.querySelector("main > .shop-container");
+const faqContent = document.querySelector("main > .faq-container");
+const faqExpandButt = document.querySelectorAll(
+  ".expand-container button.expand"
+);
+const faqQuestions = document.querySelectorAll(".expand-container");
 let cart = [];
+
 function addMarkedToCart() {
   cart = [];
-  const addedProducts = document.querySelectorAll(".container .card.added");
+  const addedProducts = document.querySelectorAll(
+    ".shop-container .card.added"
+  );
   addedProducts.forEach((product) => {
     cart.push(product.dataset.product);
   });
@@ -35,6 +46,27 @@ cards.forEach((card) => {
     }
     addMarkedToCart();
     refreshCart();
+  });
+});
+
+shopButt.addEventListener("click", () => {
+  shopContent.classList.remove("hidden");
+  faqContent.classList.add("hidden");
+});
+faqButt.addEventListener("click", () => {
+  faqContent.classList.remove("hidden");
+  shopContent.classList.add("hidden");
+});
+
+faqExpandButt.forEach((butt) => {
+  butt.addEventListener("click", () => {
+    butt.closest(".expand-container").classList.toggle("closed");
+  });
+});
+faqQuestions.forEach((expand) => {
+  console.log("test");
+  expand.addEventListener("click", () => {
+    expand.classList.toggle("closed");
   });
 });
 addMarkedToCart();

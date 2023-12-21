@@ -29,8 +29,8 @@
         </div>
         <div class="right">
           <a href="#">Featured</a>
-          <a href="#">Shop</a>
-          <a href="#">FAQ</a>
+          <a href="#" id="shopButt">Shop</a>
+          <a href="#" id="faqButt">FAQ</a>
           <a href="" class="cart">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
@@ -47,88 +47,188 @@
           </a>
         </div>
       </nav>
-      <main class="container">
-        <div
-          class="card"
-          data-product="tree-deco"
-          style="--contrast-col: #277492; --tag: 'NEW'"
-        >
-          <div class="img-container">
-            <img src="https://icodethis.com/images/iCodeMas/tree.png" alt="" />
+      <main>
+        <div class="shop-container hidden">
+          <div
+            class="card"
+            data-product="tree-deco"
+            style="--contrast-col: #277492; --tag: 'NEW'"
+          >
+            <div class="img-container">
+              <img
+                src="https://icodethis.com/images/iCodeMas/tree.png"
+                alt=""
+              />
+            </div>
+            <h4 class="description">Christmas tree Decoration</h4>
+            <h3 class="price">$19.99</h3>
           </div>
-          <h4 class="description">Christmas tree Decoration</h4>
-          <h3 class="price">$19.99</h3>
+          <div
+            class="card"
+            data-product="gift-box"
+            style="--contrast-col: #df5e55; --tag: '-23%'"
+          >
+            <div class="img-container">
+              <img
+                src="https://icodethis.com/images/iCodeMas/gift.png"
+                alt=""
+              />
+            </div>
+            <h4 class="description">Gift Box</h4>
+            <h3 class="price">$9.99</h3>
+          </div>
+          <div class="card added" data-product="cookie-man">
+            <div class="img-container">
+              <img
+                src="https://icodethis.com/images/iCodeMas/gingerbread_cookie.png"
+                alt=""
+              />
+            </div>
+            <h4 class="description">Gingerbread Man Cookie</h4>
+            <h3 class="price">$12.99</h3>
+          </div>
+          <div class="card" data-product="snowflake-deco">
+            <div class="img-container">
+              <img
+                src="https://icodethis.com/images/iCodeMas/snowflake.png"
+                alt=""
+              />
+            </div>
+            <h4 class="description">Snowflake Decoration</h4>
+            <h3 class="price">$4.99</h3>
+          </div>
+          <div class="card" data-product="cookie-star">
+            <div class="img-container">
+              <img
+                src="https://icodethis.com/images/iCodeMas/star_cookie.png"
+                alt=""
+              />
+            </div>
+            <h4 class="description">Star-shaped Cookie</h4>
+            <h3 class="price">$12.99</h3>
+          </div>
+          <div class="card" data-product="santaHat">
+            <div class="img-container">
+              <img
+                src="https://icodethis.com/images/iCodeMas/santa_hat.png"
+                alt=""
+              />
+            </div>
+            <h4 class="description">Santa's Hat</h4>
+            <h3 class="price">$39.99</h3>
+          </div>
+          <div class="card" data-product="candyCane">
+            <div class="img-container">
+              <img
+                src="https://icodethis.com/images/iCodeMas/candy_cane.png"
+                alt=""
+              />
+            </div>
+            <h4 class="description">Candy Cane</h4>
+            <h3 class="price">$8.99</h3>
+          </div>
+          <div class="card" data-product="snowman-deco">
+            <div class="img-container">
+              <img
+                src="https://icodethis.com/images/iCodeMas/snowman_deco.png"
+                alt=""
+              />
+            </div>
+            <h4 class="description">Snowman Decoration</h4>
+            <h3 class="price">$39.99</h3>
+          </div>
         </div>
-        <div
-          class="card"
-          data-product="gift-box"
-          style="--contrast-col: #df5e55; --tag: '-23%'"
-        >
-          <div class="img-container">
-            <img src="https://icodethis.com/images/iCodeMas/gift.png" alt="" />
+        <div class="faq-container">
+          <h1>Frequently asked questions</h1>
+          <p>
+            Have questions? Explore our Frequently Asked Questions section for
+            quick answers. If your question isn't answered, feel free to reach
+            out to our helpful support team.
+          </p>
+          <div class="expand-container">
+            <h3>
+              When will my order ship?
+              <button class="expand">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+                  />
+                </svg>
+              </button>
+            </h3>
+            <p>
+              Orders typically ship within 1-2 business days. During peak
+              holiday season, please allow up to 3 business days for processing
+              and shipping. You will receive an email notification with tracking
+              information once your order has shipped.
+            </p>
           </div>
-          <h4 class="description">Gift Box</h4>
-          <h3 class="price">$9.99</h3>
-        </div>
-        <div class="card added" data-product="cookie-man">
-          <div class="img-container">
-            <img
-              src="https://icodethis.com/images/iCodeMas/gingerbread_cookie.png"
-              alt=""
-            />
+          <div class="expand-container closed">
+            <h3>
+              What are your shipping rates?
+              <button class="expand">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+                  />
+                </svg>
+              </button>
+            </h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perferendis, quia. Doloremque cupiditate expedita, eligendi a
+              laudantium, esse suscipit excepturi dolores ad voluptatibus nulla!
+              Suscipit voluptatum voluptate explicabo similique, optio illo?
+            </p>
           </div>
-          <h4 class="description">Gingerbread Man Cookie</h4>
-          <h3 class="price">$12.99</h3>
-        </div>
-        <div class="card" data-product="snowflake-deco">
-          <div class="img-container">
-            <img
-              src="https://icodethis.com/images/iCodeMas/snowflake.png"
-              alt=""
-            />
+          <div class="expand-container closed">
+            <h3>
+              Do you offer gift wrapping?
+              <button class="expand">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+                  />
+                </svg>
+              </button>
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, commodi. Dolorem error magni delectus itaque autem,
+              quaerat, sequi adipisci sunt totam eius nihil!
+            </p>
           </div>
-          <h4 class="description">Snowflake Decoration</h4>
-          <h3 class="price">$4.99</h3>
-        </div>
-        <div class="card" data-product="cookie-star">
-          <div class="img-container">
-            <img
-              src="https://icodethis.com/images/iCodeMas/star_cookie.png"
-              alt=""
-            />
+          <div class="expand-container closed">
+            <h3>
+              What is your return policy?
+              <button class="expand">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+                  />
+                </svg>
+              </button>
+            </h3>
+            <p>None! You pay it you keep it.</p>
           </div>
-          <h4 class="description">Star-shaped Cookie</h4>
-          <h3 class="price">$12.99</h3>
-        </div>
-        <div class="card" data-product="santaHat">
-          <div class="img-container">
-            <img
-              src="https://icodethis.com/images/iCodeMas/santa_hat.png"
-              alt=""
-            />
+          <div class="expand-container closed">
+            <h3>
+              Do you have a store location?
+              <button class="expand">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z"
+                  />
+                </svg>
+              </button>
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sunt
+              fugiat et voluptates commodi quasi dolorum asperiores ipsam natus
+              est deleniti, repudiandae earum cumque, nobis distinctio tempora
+              laborum voluptate nam.
+            </p>
           </div>
-          <h4 class="description">Santa's Hat</h4>
-          <h3 class="price">$39.99</h3>
-        </div>
-        <div class="card" data-product="candyCane">
-          <div class="img-container">
-            <img
-              src="https://icodethis.com/images/iCodeMas/candy_cane.png"
-              alt=""
-            />
-          </div>
-          <h4 class="description">Candy Cane</h4>
-          <h3 class="price">$8.99</h3>
-        </div>
-        <div class="card" data-product="snowman-deco">
-          <div class="img-container">
-            <img
-              src="https://icodethis.com/images/iCodeMas/snowman_deco.png"
-              alt=""
-            />
-          </div>
-          <h4 class="description">Snowman Decoration</h4>
-          <h3 class="price">$39.99</h3>
         </div>
       </main>
     </div>
