@@ -8,6 +8,57 @@
     <title>iCodeThis 01.01.24 Storage Plans</title>
   </head>
   <body>
-    <div class="details"></div>
+    <div class="details">
+      <nav>
+        <button class="back">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M21,11H6.83L10.41,7.41L9,6L3,12L9,18L10.41,16.58L6.83,13H21V11Z"
+            />
+          </svg>
+          <h3>Total storage</h3>
+        </button>
+      </nav>
+      <div class="stats">
+        <div class="pie-chart"></div>
+        <div class="storage-detail">
+          <h3 class="total">30 GB</h4>
+          <p class="total">Total storage</p>
+          <h3 class="used">3.6 GB</h4>
+          <p class="used">10% used</p>
+          <button id="details">View details</button>
+        </div>
+      </div>
+    </div>
+    <div class="plans">
+      <h3>Plans</h3>
+      <div class="card selected" id="smallPlan">
+        <div class="container">
+            <div class="indicator"></div>
+            <h2>30 GB</h2>
+            <h3>Current </h3>
+        </div>
+      </div>
+      <div class="card" id="mediumPlan">
+        <div class="container">
+            <div class="indicator"></div>
+            <h2>100 GB</h2>
+        </div>
+        <div class="price-container">
+            <button class="price">NOK 17.00/month</button>
+            <p>Or prepay annually NOK 170/year</p>
+        </div>
+      </div>
+      <div class="card" id="largePlan">
+        <div class="container">
+            <div class="indicator"></div>
+            <h2>1 TB</h2>
+        </div>
+        <div class="price-container">
+            <button class="price">NOK 89.00/month</button>
+            <p>Or prepay annually NOK 899.00/year</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
