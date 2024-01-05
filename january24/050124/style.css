@@ -32,6 +32,10 @@ body {
   font-size: 0.925rem;
   font-weigh: 400;
 }
+.calculator button:hover {
+  color: #fff;
+  background-color: #243239;
+}
 
 .calculator #display {
   grid-column: 1/-1;
@@ -45,4 +49,7 @@ body {
   background-color: #d22a60;
   font-size: 2rem;
   font-weight: 200;
+}
+.calculator .equal:hover {
+  background-color: #9e1717;
 }

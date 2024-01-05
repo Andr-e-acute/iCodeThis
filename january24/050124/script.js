@@ -2,7 +2,7 @@ const display = document.getElementById("display");
 const numberButts = document.querySelectorAll(".num");
 const clearButts = document.querySelectorAll(".clear");
 const funcButt = document.querySelectorAll(".func");
-
+const equalButt = document.querySelector(".equal");
 let currentNumber = "";
 let secondNumber = "";
 let operator = "";
@@ -21,11 +21,43 @@ function showDisplay() {
   display.value = `${secondNumber}${operator}${currentNumber}`;
 }
 
+function calc() {
+  let result = "";
+  switch (operator) {
+    case "+":
+      result = Number(currentNumber) + Number(secondNumber);
+      break;
+    case "-":
+      result = Number(currentNumber) - Number(secondNumber);
+      break;
+    case "÷":
+      result = Number(secondNumber) / Number(currentNumber);
+      break;
+    case "x":
+      result = Number(currentNumber) * Number(secondNumber);
+      break;
+
+    default:
+      break;
+  }
+  if (result !== "") {
+    secondNumber = result;
+    operator = "";
+    currentNumber = "";
+  }
+}
 function handleFunc(e) {
   const symb = e.target.textContent;
+
   if (operator === "") {
-    console.log("empty");
+    operator = symb;
+    secondNumber = currentNumber;
+    currentNumber = "";
+  } else {
+    calc();
+    operator = symb;
   }
+  showDisplay();
 }
 numberButts.forEach((numButt) => {
   numButt.addEventListener("click", (e) => {
@@ -46,4 +78,11 @@ funcButt.forEach((func) => {
   func.addEventListener("click", (e) => {
     handleFunc(e);
   });
+});
+
+equalButt.addEventListener("click", () => {
+  calc();
+  currentNumber = secondNumber;
+  secondNumber = "";
+  showDisplay();
 });
