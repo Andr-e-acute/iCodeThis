@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2d3b3f;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  background-color: #394950;
+  display: grid;
+  grid-template-columns: repeat(4, 4.25rem);
+  grid-template-rows: 4.75rem repeat(5, 3.5rem);
+  box-shadow: 0 5px 10px 5px #0d2326;
+  gap: 1px;
+}
+.calculator button {
+  border: none;
+  outline: none;
+  border: 0px;
+  color: #fff;
+  background-color: #33434b;
+  font-size: 0.925rem;
+  font-weigh: 400;
+}
+
+.calculator #display {
+  grid-column: 1/-1;
+  text-align: right;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.calculator .equal {
+  grid-column: -3/-1;
+  background-color: #d22a60;
+  font-size: 2rem;
+  font-weight: 200;
+}
