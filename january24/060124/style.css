@@ -6,8 +6,109 @@
   box-sizing: border-box;
 }
 body {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5rem;
+  flex-direction: column;
+  background-color: #ecedf6;
+  margin: 3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+button.close {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0.625rem;
+  cursor: pointer;
+}
+button.close.close:hover {
+  border: 3px solid #a0a6bdca;
+}
+.info {
+  width: 100%;
+  max-width: 45rem;
+  padding: 1.125rem 1.125rem;
+  border-radius: 3rem;
+  background-color: #6e8dda;
+  display: flex;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.625rem;
+}
+.info p {
+  margin-left: 1rem;
+}
+.info a,
+.info a:visited {
+  color: inherit;
+  font-weight: 700;
+}
+.info button.close {
+  background-color: #5b7fd5;
+  fill: #ffffffcc;
+}
+
+.cookie {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cookie button.close {
+  align-self: end;
+  background-color: inherit;
+  border: 2px solid #dddddd7c;
+}
+.cookie button.close:hover {
+  background-color: #e0e3e8bb;
+}
+.cookie > svg {
+  margin-top: -1rem;
+  width: 5rem;
+  margin-bottom: 1rem;
+}
+.cookie p {
+  max-width: 34ch;
+  font-size: 0.625rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.cookie .buttonContainer button {
+  padding: 0.75rem 1rem;
+
+  margin: 0.25rem;
+  border-radius: 3rem;
+  border: 2px solid #bac7e2bb;
+  background-color: inherit;
+  color: #1944bb;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+.cookie .buttonContainer button:hover {
+  border: 2px solid #1944bb;
+  background-color: #e0e3e8bb;
+}
+.cookie > a,
+.cookie > a:visited {
+  margin-top: 1rem;
+  color: inherit;
+  font-size: 0.625rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.modal.closed {
+  display: none;
 }
