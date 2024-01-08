@@ -5,7 +5,134 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+:root {
+  --bg: #e3e1ee;
+}
 body {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #e3e2ee;
+}
+
+.progress-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 0 0 30px -10px#50508abb;
+}
+.pie {
+  --color: #26275b;
+  --size: 6.5rem;
+  --inset: 0.625rem;
+  height: var(--size);
+  width: var(--size);
+  background: conic-gradient(
+    var(--color) calc(var(--percent) * 1%),
+    var(--bg) 0
+  );
+  position: relative;
+  border-radius: 50%;
+  z-index: 0;
+}
+.pie:before {
+  content: "";
+  position: absolute;
+  border-radius: 150% 50% 50% 20%;
+  inset: calc(48% - var(--inset) / 2);
+  background: var(--color);
+  transform: translateY(calc(50% - var(--size) / 2));
+}
+.pie:after {
+  content: "";
+  position: absolute;
+  border-radius: 50% 150% 50% 50%;
+  inset: calc(50% - var(--inset) / 2);
+  background: var(--color);
+  transform: rotate(calc(var(--percent) * 3.6deg))
+    translateY(calc(50% - var(--size) / 2));
+  z-index: -1;
+}
+
+.pie > .chart-inside {
+  position: absolute;
+  background-color: #fff;
+  inset: var(--inset);
+  border-radius: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px -2px var(--color);
+}
+.chart-inside h3 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+.chart-inside h3 span {
+  font-weight: 700;
+}
+.chart-inside p {
+  font-size: 0.55rem;
+  font-weight: 500;
+  width: min-content;
+}
+.progress-items {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.progress-items h2 {
+  font-size: 1rem;
+  padding: 0.25rem 0;
+}
+
+.progress-items button {
+  padding: 0.75rem 0.5rem;
+  display: grid;
+  align-items: center;
+  justify-items: start;
+  column-gap: 0.75rem;
+  grid-template-columns: auto 7rem;
+  grid-template-rows: 1rem 1rem;
+  border-radius: 0.25rem;
+  border: 2px solid rgba(189, 189, 189, 0.626);
+  background-color: inherit;
+}
+
+.progress-items button:hover {
+  border: 2px solid #888;
+  cursor: pointer;
+}
+.progress-items button div:hover,
+.progress-items button.selected div {
+  background-color: #2c2c59;
+}
+.progress-items button.selected div:hover {
+  background-color: inherit;
+}
+.progress-items button div {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  padding: 0.25rem;
+  fill: white;
+  border: 2px solid #e3e2ee;
+}
+.progress-items h5 {
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+.progress-items p {
+  text-align: start;
+  grid-column: 2/-1;
+  font-size: 0.625rem;
 }
