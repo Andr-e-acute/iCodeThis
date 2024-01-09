@@ -5,3 +5,172 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #fbfdff;
+}
+body > * {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 3px 20px -5px #b3daec;
+  width: 18rem;
+}
+
+body .info-box {
+  background: rgb(47, 144, 205);
+
+  background: linear-gradient(
+    18deg,
+    rgba(47, 144, 205, 1) 20%,
+    rgba(127, 218, 233, 1) 78%,
+    rgba(134, 224, 235, 1) 100%
+  );
+  /* doesn't work together with a gradient /??? */
+  /* background-image: url('data:image/svg+xml,<svg id="visual" viewBox="0 0 900 450" width="300" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g transform="translate(985.2929986926929 75.98957287235605)"><path d="M147.3 -99.1C158.4 -14 112.2 38.5 49.6 89C-13.1 139.4 -92.4 187.8 -174.7 149.5C-257.1 111.1 -342.5 -14 -313.9 -123.3C-285.3 -232.7 -142.7 -326.4 -37.2 -314.2C68.2 -302.1 136.3 -184.3 147.3 -99.1" fill="%237bd6e5"></path></g></svg>');
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 100% 00%; */
+  position: relative;
+  z-index: 1;
+
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 0.5rem 0 0.25rem;
+}
+body .info-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml,<svg id="visual" viewBox="0 0 900 450" width="300" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g transform="translate(985.2929986926929 75.98957287235605)"><path d="M147.3 -99.1C158.4 -14 112.2 38.5 49.6 89C-13.1 139.4 -92.4 187.8 -174.7 149.5C-257.1 111.1 -342.5 -14 -313.9 -123.3C-285.3 -232.7 -142.7 -326.4 -37.2 -314.2C68.2 -302.1 136.3 -184.3 147.3 -99.1" fill="%237bd6e5"></path></g></svg>');
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 100% 00%;
+  z-index: -1;
+}
+.info-box > svg {
+  position: relative;
+  top: -1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.info-box p {
+  color: #ffffffdd;
+  font-size: 0.625rem;
+  max-width: 28ch;
+  letter-spacing: 0.25px;
+  font-weight: 400;
+}
+.info-box p a,
+.info-box p a:visited {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.info-box button.close {
+  width: 1rem;
+  border: none;
+  background-color: transparent;
+  fill: #fff;
+  margin-top: 0.5rem;
+  align-self: self-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  display: grid;
+  grid-template-rows: repeat(5, 2.75rem);
+  padding: 1.25rem;
+  gap: 0.5rem;
+}
+
+nav > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+nav > .container button {
+  padding: 0.175rem 0.5rem;
+  background-color: inherit;
+  border: 2px solid #4799c1;
+  color: #4799c1;
+  fill: #4799c1;
+
+  border-radius: 1rem;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+nav > .container button svg {
+  width: 1rem;
+}
+nav .search-container {
+  display: flex;
+  border: 2px solid #d0d0d0bb;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.375rem;
+  fill: #97a4ae;
+  color: #97a4ae;
+  gap: 0.5rem;
+}
+.search-container input {
+  border: none;
+}
+.search-container input:focus {
+  outline: none;
+}
+.search-container:focus-within {
+  outline: 2px solid black;
+}
+.search-container input::placeholder {
+  color: #97a4ae;
+  letter-spacing: 0.25px;
+}
+nav > a .logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 1.5px solid rgba(128, 128, 128, 0.663);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+nav > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+nav > a,
+nav a:visited {
+  font-size: 0.825rem;
+  letter-spacing: 0.5px;
+  color: #222;
+  font-weight: 500;
+  text-decoration: none;
+}
