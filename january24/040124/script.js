@@ -1,5 +1,5 @@
 let vistorNumbers = [
-  { name: "morbi ligula", count: 15756 },
+  { name: "morbi ligula", count: 25756 },
   { name: " Scelerisque", count: 11144 },
   { name: "Praesent maecenas", count: 8838 },
   { name: "Morbi ligula", count: 1539 },

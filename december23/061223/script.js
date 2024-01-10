@@ -5,3 +5,4 @@ cards.forEach((card) => {
     card.classList.toggle("added");
   });
 });
+g
