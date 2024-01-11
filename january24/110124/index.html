@@ -3,9 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <title>iCodeThis 11.01.24 Full Page Select</title>
   </head>
-  <body></body>
+  <body>
+    <div class="grid-container">
+      <div class="counter">2/4</div>
+      <div class="cat-container">
+        <h1>Select category</h1>
+        <p>Select the category where you want to add these records.</p>
+      </div>
+      <div class="card-container">
+        <button class="add">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+          </svg>
+        </button>
+        <div class="card">
+          <img
+            src="https://source.unsplash.com/assorted-succulents-in-clay-pots-ncQ2sguVlgo"
+            alt=""
+          />
+          <h2>Plants</h2>
+          <button>Select</button>
+        </div>
+        <div class="card deselected">
+          <img
+            src="https://source.unsplash.com/strawberry-and-banana-on-white-ceramic-plate-vT5xrj3z1OE"
+            alt=""
+          />
+          <h2>Desserts</h2>
+          <button>Select</button>
+        </div>
+        <div class="card">
+          <img
+            src="https://source.unsplash.com/blue-leather-handbag-on-black-leather-bag-nvQemFKRBUo"
+            alt=""
+          />
+          <h2>Accessories</h2>
+          <button>Select</button>
+        </div>
+      </div>
+      <nav>
+        <button>
+          Continue
+          <span
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </nav>
+    </div>
+  </body>
 </html>
