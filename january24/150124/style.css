@@ -14,3 +14,121 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+.oneTimeModal {
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  box-shadow: -0 50px 50px -50px #9eb8cf, 0 0px 20px -10px #9eb8cf,
+    -30px -30px 5px 0px #e8eafeef, 30px -30px 5px 0px #e4f0fcee,
+    0px -30px 5px 0px #e2ebf9c4;
+}
+
+.oneTimeModal h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+.oneTimeModal p {
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: #000000dd;
+}
+.oneTimeModal > button {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bolder;
+  font-size: 0.75rem;
+  letter-spacing: 0.25px;
+  font-weight: 600;
+}
+.oneTimeModal button.buy {
+  background: linear-gradient(90deg, #71f094, #7ff3ea);
+}
+.oneTimeModal button.pickup {
+  background: linear-gradient(90deg, #9ec5fc, #b2affc);
+}
+.oneTimeModal p .storage {
+  font-weight: bolder;
+}
+
+.oneTimeModal ul {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.oneTimeModal ul li .checkmark {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #e8ecfe;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check</title><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg>');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.oneTimeModal ul li {
+  gap: 0.25rem;
+  align-items: center;
+  display: inline-flex;
+  list-style: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.oneTimeModal ul li a,
+.oneTimeModal ul li a:visited {
+  color: inherit;
+}
+
+.oneTimeModal .location {
+  background-color: #f2f5ff;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+}
+.location label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.location div.input-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.325rem;
+}
+
+.location div.input-container div {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+.location div.input-container svg {
+  width: 2rem;
+  height: 2rem;
+}
+.location input {
+  appearance: none;
+  border: none;
+  background-color: inherit;
+  width: 14ch;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.location input::placeholder {
+  color: #535562;
+}
+.location div.input-container button {
+  border: none;
+  background-color: #fffeff;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
