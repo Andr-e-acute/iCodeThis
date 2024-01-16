@@ -7,9 +7,92 @@
     <title>i Code This 16.01.24 Projects Board</title>
   </head>
   <body>
-    <nav></nav>
-    <div class="sidebar"></div>
-    <main></main>
-    <footer></footer>
+    <div class="screen">
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li class="selected"><a href="">Project</a></li>
+          <li><a href="">Inbox</a><span class="indicator new"></span></li>
+          <li><a href="">Teams</a></li>
+        </ul>
+        <div class="account">
+          <button class="upgrade">Upgrade</button>
+          <div class="profile">JG</div>
+        </div>
+      </nav>
+      <div class="sidebar">
+        <div class="projectList">
+          <h3>Projects</h3>
+          <div class="category cat-boardme">
+            <span class="indicator"></span>boardme development
+          </div>
+          <div class="category cat-feature">
+            <span class="indicator"></span>feature-list
+          </div>
+          <div class="category cat-martketing">
+            <span class="indicator"></span>Marketing
+          </div>
+          <div class="category cat-uidd">
+            <span class="indicator"></span>UIDD
+          </div>
+          <div class="category cat-topics">
+            <span class="indicator"></span>Topics
+          </div>
+          <div class="category cat-bugs">
+            <span class="indicator"></span>Bugs and fixes
+          </div>
+          <a href="#">View all ></a>
+        </div>
+        <div class="teams">
+          <h3>Teams</h3>
+          <div class="add-team">
+            <h5>Need to form a team?</h5>
+            <p>Try or 30 days trial and see what you can achieve together</p>
+            <button>Try it free</button>
+          </div>
+        </div>
+      </div>
+      <main>
+        <h1>Projects</h1>
+        <div class="card-container">
+          <div class="card cat-martketing">
+            <span class="symbol">M</span>
+            <h4>Marketing</h4>
+          </div>
+          <div class="card cat-feature">
+            <span class="symbol">Fl</span>
+            <h4>feature-list</h4>
+          </div>
+          <div class="card cat-boardme">
+            <span class="symbol">bd</span>
+            <h4>boardme development</h4>
+          </div>
+          <div class="card cat-uidd">
+            <span class="symbol">Ud</span>
+            <h4>UIDD</h4>
+          </div>
+          <div class="new card">
+            <span class="new">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+              </svg>
+            </span>
+            <h4>Add a project</h4>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <a href="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>dots-horizontal</title>
+            <path
+              d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+            />
+          </svg>
+        </a>
+        <a href="">Privacy</a>
+        <a href="" class="questionMark">?</a>
+      </footer>
+    </div>
   </body>
 </html>
