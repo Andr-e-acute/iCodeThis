@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #f8f0fb, #d0d6e4);
+}
+
+body .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+.pricing-card {
+  height: 20rem;
+  width: 12rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  gap: 0.25rem;
+  flex-direction: column;
+  position: relative;
+}
+.pricing-card h2 {
+  font-size: 1.125rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+}
+.pricing-card h3 {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.pricing-card ul {
+  margin: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.pricing-card ul > li {
+  font-size: 0.5625rem;
+  font-weight: 600;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+li::before {
+  flex-shrink: 0;
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg viewBox="297.0621 66.0087 25.7452 25.9333" width="25.7452" height="25.9333" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0" style="" transform="matrix(1.0516819953918457, -0.009564001113176346, 0, 1.0498019456863403, 300.46953674101354, 69.61318814128957)"><rect x="-3.24" y="-3.24" width="24.48" height="24.48" rx="12.24" fill="%23f2f8ee" strokewidth="0"/></g><g id="SVGRepo_iconCarrier" style="" transform="matrix(1.0516819953918457, -0.009564001113176346, 0, 1.0498019456863403, 300.46953674101354, 69.61318814128957)"><path fill-rule="evenodd" clip-rule="evenodd" d="M 3.687 7.464 C 3.22 6.969 2.462 6.968 1.995 7.461 C 1.529 7.954 1.529 8.753 1.995 9.248 L 5.982 13.468 C 6.449 13.963 7.207 13.965 7.674 13.472 L 14.85 5.903 C 15.316 5.41 15.316 4.61 14.85 4.115 C 14.383 3.621 13.625 3.619 13.158 4.112 L 6.828 10.789 L 3.687 7.464 Z" fill="%239dbf6e" style=""/></g></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pricing-card button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 0.625rem;
+  background-color: inherit;
+}
+
+.pricing-card.starter {
+  box-shadow: 0 0 5px -3px #375daf, 0 0 3px 10px #bccaeb72;
+}
+.pricing-card.starter h2,
+.pricing-card.starter button {
+  color: #8830cf;
+}
+.pricing-card.starter button {
+  border: 1px solid gray;
+}
+.pricing-card.pro {
+  box-shadow: 0 0 5px -3px #bf4d87, 0 0 3px 10px #f69bca52;
+}
+.pricing-card.pro h2 {
+  color: #c91371;
+}
+.pricing-card.pro button {
+  background-color: #c91371;
+  color: #fff;
+}
+
+@media (min-width: 700px) {
+  .pricing-card.pro:after {
+    content: "";
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+    bottom: -4rem;
+    right: -8rem;
+    scroll-padding-block-start: 1px solid red;
+    background: linear-gradient(-45deg, #eccaee24, #f2b7f67c);
+    z-index: -1;
+    filter: blur(1px);
+  }
+  .pricing-card.starter:after {
+    content: "";
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+    top: -8rem;
+    right: -8rem;
+    background: linear-gradient(-45deg, #d5d9fc0b, #bac1fd73);
+    z-index: -1;
+    filter: blur(1px);
+  }
+}
