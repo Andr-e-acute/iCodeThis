@@ -9,27 +9,41 @@
   <body>
     <div class="screen">
       <header>
-        <button class="back">W</button>
-        <h1>Bergen-Budapest</h1>
-        <button class="dots">...</button>
+        <button class="back">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>chevron-left</title>
+            <path
+              d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
+            />
+          </svg>
+        </button>
+        <h1>Bergen - Budapest</h1>
+        <button class="dots">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>dots-horizontal</title>
+            <path
+              d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+            />
+          </svg>
+        </button>
       </header>
       <section class="done">
-        <div class="checkmark">v</div>
+        <div class="checkmark"></div>
         <h2>Flight booked</h2>
         <p>confirmation Code</p>
         <h3>678900</h3>
         <button class="additional">Show Booking Summary</button>
       </section>
       <section class="done">
-        <div class="checkmark">v</div>
+        <div class="checkmark"></div>
         <h2>Preparation</h2>
         <div class="tag">Priority</div>
         <button class="additional">add services</button>
       </section>
       <section class="done">
-        <div class="checkmark">v</div>
+        <div class="checkmark"></div>
         <h2>Check-in</h2>
-        <p>all Passengers Checked-in</p>
+        <p class="noMargin">all Passengers Checked-in</p>
         <div class="tags">
           <div class="tag big">AG</div>
           <div class="tag big">II</div>
@@ -38,7 +52,9 @@
       <section>
         <div class="checkmark"></div>
         <h2>Packing</h2>
-        <p>You may upgrade you baggage up to three hours before depature</p>
+        <p class="noMargin">
+          You may upgrade you baggage up to three hours before depature
+        </p>
         <button class="additional">add baggage</button>
       </section>
     </div>
