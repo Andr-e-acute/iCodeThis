@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --contrast-color: #fdb029;
+  --sec-font-col: #b0b1b5;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f6f6f6;
+}
+
+.card {
+  color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 20px 0 #9d9d9f;
+  background-color: #1f2125;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card.restaurant .card h2 {
+  font-size: 1rem;
+  margin-right: auto;
+}
+
+.restaurant .restaurantDetails {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  display: grid;
+  color: #1f2125;
+  grid-template-columns: 6rem 10rem;
+  grid-template-rows: repeat(3, auto);
+}
+.restaurantDetails > *:not(img) {
+  grid-column: 2/3;
+}
+.restaurantDetails img {
+  grid-row: 1/-1;
+  grid-column: 1/2;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 #cdd2d0;
+}
+.restaurantDetails h3,
+.restaurantDetails .rating {
+  grid-row: 1/2;
+}
