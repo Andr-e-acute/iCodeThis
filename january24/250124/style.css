@@ -7,12 +7,16 @@
 }
 :root {
   --contrast-color: #fdb029;
-  --sec-font-col: #b0b1b5;
+  --sec-font-col: #bebebe;
+}
+.bold {
+  font-weight: bold;
 }
 body {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-template-columns: auto auto;
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -25,18 +29,20 @@ body {
 .card {
   color: #fff;
   border-radius: 0.25rem;
-  box-shadow: 0 5px 20px 0 #9d9d9f;
+  box-shadow: 0 5px 20px 0 #787885;
   background-color: #1f2125;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
 }
 
-.card.restaurant .card h2 {
+.card h2 {
+  font-weight: 600;
   font-size: 1rem;
   margin-right: auto;
+  margin-bottom: 1rem;
 }
 
 .restaurant .restaurantDetails {
@@ -45,6 +51,7 @@ body {
   padding: 0.5rem;
   display: grid;
   color: #1f2125;
+  gap: 0.25rem;
   grid-template-columns: 6rem 10rem;
   grid-template-rows: repeat(3, auto);
 }
@@ -54,12 +61,119 @@ body {
 .restaurantDetails img {
   grid-row: 1/-1;
   grid-column: 1/2;
-  height: 5rem;
-  width: 5rem;
+  height: 5.5rem;
+  width: 5.5rem;
+  object-fit: cover;
   border-radius: 0.25rem;
-  box-shadow: 0 2px 5px 0 #cdd2d0;
+  box-shadow: 0 2px 5px 0 #919895;
 }
 .restaurantDetails h3,
 .restaurantDetails .rating {
   grid-row: 1/2;
+}
+
+.restaurantDetails h3 {
+  font-size: 0.825rem;
+  display: inline-flex;
+  align-items: flex-end;
+}
+.restaurantDetails .rating {
+  margin-left: auto;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: flex-end;
+}
+.restaurantDetails .rating::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #8ea0e3;
+  clip-path: polygon(
+    50% 0%,
+    64% 32%,
+    98% 35%,
+    70% 57%,
+    79% 91%,
+    50% 74%,
+    21% 91%,
+    30% 57%,
+    2% 35%,
+    39% 32%
+  );
+}
+
+.restaurantDetails p {
+  font-size: 0.5625rem;
+  max-width: 26ch;
+}
+.restaurantDetails .location,
+.restaurantDetails .opening {
+  display: grid;
+  grid-template-columns: 1rem auto;
+  fill: var(--contrast-color);
+}
+
+.card header {
+  padding: 1rem 0;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--sec-font-col);
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1rem auto 1rem;
+  fill: currentColor;
+  border-bottom: 1px solid #474750;
+}
+
+.card header :nth-child(3) {
+  fill: var(--contrast-color);
+}
+
+.card .buttons {
+  display: grid;
+  column-gap: 0.25rem;
+  row-gap: 0.75rem;
+  grid-template-columns: repeat(8, 1.75rem);
+  grid-auto-rows: 1.75rem;
+}
+button {
+  border-radius: 1rem;
+  border: none;
+  color: var(--sec-font-col);
+  background-color: inherit;
+  font-weight: 300;
+  font-size: 0.625rem;
+}
+
+button.selected {
+  background-color: var(--contrast-color);
+  font-weight: 500;
+  color: #fff;
+}
+.card a,
+.card a:visited {
+  font-size: 0.625rem;
+  padding: 0.75rem 0;
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+
+.card.choseTime svg {
+  fill: var(--contrast-color);
+}
+.card.choseTime .times {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.card.choseTime button {
+  padding: 0.5rem 1rem;
+}
+
+button.lone {
+  align-self: start;
+  margin-left: auto;
+  padding: 0.75rem 3rem;
+  font-size: 0.75rem;
 }
