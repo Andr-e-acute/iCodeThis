@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d7e3ef;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(2, auto);
+  color: #191744;
+  fill: currentColor;
+}
+h2 {
+  font-size: 1rem;
+}
+p {
+  font-size: 0.625rem;
+}
+.bold {
+  font-weight: 700;
+}
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px 0 #cbd3e4;
+  position: relative;
+  min-width: 12rem;
+  padding: 1rem;
+}
+.profile.card {
+  display: flex;
+}
+.profile.card img {
+  position: relative;
+  top: -4rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+.permission.card {
+  display: grid;
+  grid-template-columns: 2rem 10rem;
+  grid-template-rows: 2rem;
+}
+
+.permission.card > *:not(svg) {
+  grid-column: 2/3;
+}
+.permission.card svg {
+  padding: 0.5rem;
+}
