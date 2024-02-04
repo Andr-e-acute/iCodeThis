@@ -1,0 +1,194 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gradient: linear-gradient(60deg, #e24c67, #ef5252);
+}
+body {
+  background: var(--gradient);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comp {
+  width: 16rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 5px 10px 2px #fde4e8;
+  background-color: #fff;
+}
+
+.comp.nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, 3rem);
+
+  list-style: none;
+}
+.nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav ul li:active p {
+  color: #fff;
+}
+.nav ul li:active icon {
+  background: var(--gradient);
+  fill: #fff;
+}
+
+.nav p {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+.nav .icon {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+.nav .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.comp .freq-payments {
+  background: var(--gradient);
+  color: #fddce0;
+  fill: #fddce0;
+}
+h3 {
+  font-size: 0.75rem;
+}
+.freq-payments > button {
+  padding: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.freq-payments > button:hover {
+  background-color: #ffffff80;
+  box-shadow: 0 0 5px 5px #fdf3f8;
+}
+.freq-payments > button svg {
+  width: 100%;
+  height: 100%;
+}
+.freq-payments .pictures-container {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.profile-pic {
+  border: 3px solid #f794a4;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+.comp .instructions {
+  display: flex;
+  gap: 1rem;
+}
+.instructions p {
+  font-size: 0.625rem;
+  text-align: center;
+}
+.instructions > nav {
+  display: flex;
+  justify-content: space-between;
+}
+.instructions > nav > button {
+  width: 3rem;
+  height: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: #f8565b;
+  border: 2px solid #f2d6dd;
+  border-radius: 99rem;
+}
+.instructions > nav > button:hover {
+  border-color: #f8565b;
+  background-color: #f2d6dd;
+  box-shadow: 0 0 5px 0 #7c5051;
+}
+
+.instructions .indicator-cont {
+  display: flex;
+  gap: 0.125rem;
+}
+.indicator-cont .indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: #f2d6dd;
+}
+.indicator.active {
+  border-color: #f2d6dd;
+  background-color: #f8565b;
+}
+
+.comp .profiles {
+  background-color: #ebebeb;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-rows: 8rem;
+  gap: 2px;
+}
+.profiles .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile button.more {
+  align-self: end;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: inherit;
+}
+button.more:hover {
+  border-color: #f8565b;
+  background-color: #f2d6dd;
+  box-shadow: 0 0 5px 0 #7c5051;
+}
+.profile h4 {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+.profile h5 {
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: #bcbec2;
+}
+.profile button.add {
+  border: 2px solid transparent;
+  border-radius: 999rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--gradient);
+  color: #fff;
+}
+.profile button.add:hover {
+  border-color: #ff1717;
+  filter: contrast(200%);
+  font-weight: 600;
+  box-shadow: 0 0 5px 0 #7c5051;
+}
