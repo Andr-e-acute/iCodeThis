@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>iCodeThis 04.02.24 Payment App</title>
+  </head>
+  <body>
+    <div class="comp nav">
+      <ul>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>view-grid-outline</title>
+            <path
+              d="M3 11H11V3H3M5 5H9V9H5M13 21H21V13H13M15 15H19V19H15M3 21H11V13H3M5 15H9V19H5M13 3V11H21V3M19 9H15V5H19Z"
+            />
+          </svg>
+          Home
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>credit-card-outline</title>
+            <path
+              d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+            />
+          </svg>
+          Cards
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>cash-multiple</title>
+            <path
+              d="M5,6H23V18H5V6M14,9A3,3 0 0,1 17,12A3,3 0 0,1 14,15A3,3 0 0,1 11,12A3,3 0 0,1 14,9M9,8A2,2 0 0,1 7,10V14A2,2 0 0,1 9,16H19A2,2 0 0,1 21,14V10A2,2 0 0,1 19,8H9M1,10H3V20H19V22H1V10Z"
+            />
+          </svg>
+          payments
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>invoice-text-outline</title>
+            <path
+              d="M17 7V9H7V7H17M15 11V13H7V11H15M18 20L21 22V3H3V22L6 20L9 22L12 20L15 22L18 20M19 5V18.26L18 17.6L15 19.6L12 17.6L9 19.6L6 17.6L5 18.26V5H19Z"
+            />
+          </svg>
+          Tax
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>account-outline</title>
+            <path
+              d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z"
+            />
+          </svg>
+          Profile
+        </li>
+      </ul>
+    </div>
+    <div class="comp freq-payments">
+      <h3>Frequent payments</h3>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <title>dots-horizontal</title>
+          <path
+            d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+          />
+        </svg>
+      </button>
+      <div class="pictures-container">
+        <div class="profile-pic">
+          <img src="https://source.unsplash.com/3ujVzg9i2EI" alt="" />
+        </div>
+        <div class="profile-pic">
+          <img src="https://source.unsplash.com/8A7fD6Y5VF8" alt="" />
+        </div>
+        <div class="profile-pic">
+          <img src="https://source.unsplash.com/n2WT4H30L9k" alt="" />
+        </div>
+        <div class="profile-pic">
+          <img src="https://source.unsplash.com/KBv5dEN3QtY" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="comp instructions">
+      <p>
+        Accept payments on your phone with simple payment buttons. or one of our
+        flexible payment solutions. which can be customized to the needs of your
+        business.
+      </p>
+      <nav>
+        <button class="prev">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>arrow-left-thin</title>
+            <path
+              d="M10.05 16.94V12.94H18.97L19 10.93H10.05V6.94L5.05 11.94Z"
+            />
+          </svg>
+        </button>
+        <div class="indicator-cont">
+          <div class="indicator"></div>
+          <div class="indicator"></div>
+          <div class="indicator active"></div>
+          <div class="indicator"></div>
+        </div>
+        <button class="next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>arrow-right-thin</title>
+            <path d="M14 16.94V12.94H5.08L5.05 10.93H14V6.94L19 11.94Z" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+    <div class="comp profiles">
+      <div class="profile">
+        <button class="more">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>dots-vertical</title>
+            <path
+              d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"
+            />
+          </svg>
+        </button>
+        <div class="profile-pic">
+          <img src="https://source.unsplash.com/3TLl_97HNJo"" alt="" />
+        </div>
+        <h4 class="name">Lee Parson</h4>
+        <h5 class="username">@pears</h5>
+        <button class="add">Add contact</button>
+      </div>
+      <div class="profile">
+        <button class="more">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>dots-vertical</title>
+            <path
+              d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"
+            />
+          </svg>
+        </button>
+        <div class="profile-pic">
+          <img src="https://source.unsplash.com//a19OVaa2rzA" alt="" />
+        </div>
+        <h4 class="name">Curtis Thornton</h4>
+        <h5 class="username">@c-thronton</h5>
+        <button class="add">Add contact</button>
+      </div>
+      <div class="profile">
+        <button class="more">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>dots-vertical</title>
+            <path
+              d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"
+            />
+          </svg>
+        </button>
+        <div class="profile-pic">
+          <img src="https://source.unsplash.com/KBv5dEN3QtY" alt="" />
+        </div>
+        <h4 class="name">Amy Moss</h4>
+        <h5 class="username">@amy-m</h5>
+        <button class="add">Add contact</button>
+      </div>
+      <div class="profile">
+        <button class="more">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>dots-vertical</title>
+            <path
+              d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"
+            />
+          </svg>
+        </button>
+        <div class="profile-pic">
+          <img
+            src="https://source.unsplash.com/woman-holding-heft-long-blonde-hair-et_78QkMMQs"
+            alt=""
+          />
+        </div>
+        <h4 class="name">Elva Burke</h4>
+        <h5 class="username">@elva-bruk</h5>
+        <button class="add">Add contact</button>
+      </div>
+    </div>
+  </body>
+</html>
