@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>iCodeThis 07.02.2024 Setting Widget</title>
+  </head>
+  <body>
+    <div class="card widget">
+      <h2>Customize your widget</h2>
+      <fieldset>
+        <div>
+          <input type="radio" name="widget" id="contact-butt" />
+          <label for="contact-butt">Display Contact button</label>
+        </div>
+        <div>
+          <input type="radio" name="widget" id="hide-email" />
+          <label for="hide-email">Hide email address</label>
+        </div>
+        <div>
+          <input type="radio" name="widget" id="publish-butt" />
+          <label for="publish-butt">Display Publish button</label>
+        </div>
+      </fieldset>
+      <div class="butt-container">
+        <button class="cancel">Cancel</button>
+        <button class="save">Save</button>
+      </div>
+    </div>
+    <div class="card other">
+      <h2>Other</h2>
+      <div>
+        <input type="checkbox" name="in-app" id="in-app" />
+        <label for="in-app">Turn on in-app notifications</label>
+      </div>
+      <div>
+        <input type="checkbox" name="newsletter" id="newsletter" />
+        <label for="newsletter">
+          Receive weekly newsletter and other offers
+        </label>
+      </div>
+      <div class="more-container">
+        <button class="more"></button>
+        <ul>
+          <li><a href="#">Edit your list</a></li>
+          <li><a href="#">Account settings</a></li>
+          <li><a href="#">View your profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
