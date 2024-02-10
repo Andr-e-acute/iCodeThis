@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src=""></script>
+    <script src="script.js" defer></script>
     <title>i Code This 10.02.24 Subscription Plan</title>
   </head>
   <body>
-    <!-- <div class="card" style="--color: #603ca9"> -->
+    <!-- <div class="card" style="--color: #192858"> -->
     <div class="card">
       <div class="plans-container">
         <div class="plan free hidden">
@@ -44,7 +44,7 @@
           <div class="price"><span></span>Free</div>
           <h3>for now</h3>
         </div>
-        <div class="plan basic hidden">
+        <div class="plan basic">
           <div class="icon">
             <svg
               fill="#000000"
@@ -90,7 +90,7 @@
           <div class="price"><span>KR</span>199</div>
           <h3>Nok/Month</h3>
         </div>
-        <div class="plan pro">
+        <div class="plan pro hidden">
           <div class="icon">
             <svg
               fill="#000000"
@@ -160,10 +160,10 @@
         </div>
       </div>
       <div class="downloads-selector">
-        <button class="downs 10">10</button>
-        <button class="downs 25 selected">25</button>
-        <button class="downs 50">50</button>
-        <button class="downs 100">100</button>
+        <button class="downs free">10</button>
+        <button class="downs basic selected">25</button>
+        <button class="downs pro">50</button>
+        <button class="downs premium">100</button>
       </div>
       <p>Downloads per month</p>
       <button class="subscribe">Subscribe</button>
