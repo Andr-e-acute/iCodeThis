@@ -9,7 +9,37 @@
   </head>
   <body>
     <div class="card toDo">
-      <h1>Groceries</h1>
+      <header>
+        <h1>Groceries</h1>
+        <p>shared with 1 Person</p>
+        <button class="more">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>dots-horizontal</title>
+            <path
+              d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z"
+            />
+          </svg>
+        </button>
+      </header>
+      <ul class="incomplete">
+        <li>
+          <input type="checkbox" />
+          <label for="checkbox"> Eggs</label>
+        </li>
+      </ul>
+      <h2>Completed (<span class="counter">)4</span></h2>
+      <ul class="completed">
+        <li>
+          <input type="checkbox" checked />
+          <label for="checkbox"> Egg noodles</label>
+        </li>
+      </ul>
+      <button class="new">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <title>plus</title>
+          <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+        </svg>
+      </button>
     </div>
   </body>
 </html>
