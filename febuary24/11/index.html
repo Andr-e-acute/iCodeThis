@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>iCodeThis 11.02.24 To Do 2</title>
@@ -11,7 +17,7 @@
     <div class="card toDo">
       <header>
         <h1>Groceries</h1>
-        <p>shared with 1 Person</p>
+        <p>shared with <a href="#">1 Person</a></p>
         <button class="more">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>dots-horizontal</title>
@@ -23,15 +29,42 @@
       </header>
       <ul class="incomplete">
         <li>
-          <input type="checkbox" />
-          <label for="checkbox"> Eggs</label>
+          <input type="checkbox" id="item-1" />
+          <label for="item-1" class="checkbox">&#10004;</label>
+          <label for="item-1"> Eggs</label>
+        </li>
+        <li>
+          <input type="checkbox" id="item-2" />
+          <label for="item-2" class="checkbox">&#10004;</label>
+          <label for="item-2"> Tomatoes</label>
+        </li>
+        <li>
+          <input type="checkbox" id="item-3" />
+          <label for="item-3" class="checkbox">&#10004;</label>
+          <label for="item-3">Avocado</label>
         </li>
       </ul>
-      <h2>Completed (<span class="counter">)4</span></h2>
+      <h2>Completed (<span class="counter">4</span>)</h2>
       <ul class="completed">
         <li>
-          <input type="checkbox" checked />
-          <label for="checkbox"> Egg noodles</label>
+          <input type="checkbox" id="item-4" checked />
+          <label for="item-4" class="checkbox">&#10004;</label>
+          <label for="item-4"> Eggs noodles</label>
+        </li>
+        <li>
+          <input type="checkbox" id="item-5" checked />
+          <label for="item-5" class="checkbox">&#10004;</label>
+          <label for="item-5"> Scampi</label>
+        </li>
+        <li>
+          <input type="checkbox" id="item-6" checked />
+          <label for="item-6" class="checkbox">&#10004;</label>
+          <label for="item-6"> Orange Juice</label>
+        </li>
+        <li>
+          <input type="checkbox" id="item-7" checked />
+          <label for="item-7" class="checkbox">&#10004;</label>
+          <label for="item-7"> ApplesS</label>
         </li>
       </ul>
       <button class="new">
