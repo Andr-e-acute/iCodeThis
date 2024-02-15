@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 3rem;
+  margin: 1rem 2rem;
+  place-content: center;
+  grid-template-columns: 1fr 1fr;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #e3f6f4;
+}
+svg {
+  width: 4rem;
+}
+h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+p {
+  font-size: 0.625rem;
+}
+.bold {
+  font-weight: 700;
+}
+.card {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 #7ecac7;
+}
+.card.blue {
+  background-color: #2d698d;
+  color: #ffffffc0;
+}
+.blue .bold {
+  color: #fff;
+}
+.card.simple {
+  display: grid;
+  row-gap: 0.5rem;
+  column-gap: 2rem;
+  grid-template-columns: 1fr 3rem;
+}
+.simple button,
+.with-icon button {
+  width: 1.75rem;
+  align-self: center;
+  justify-self: center;
+  height: 1.75rem;
+  border-radius: 50%;
+  border: none;
+  grid-row: 1/3;
+  grid-column: -2/-1;
+}
+
+.with-icon {
+  display: grid;
+  row-gap: 0.5rem;
+  column-gap: 2rem;
+  grid-template-columns: 3rem 1fr 3rem;
+}
+.with-icon svg {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+
+button.more {
+  background-size: 80%;
+  background-position: center;
+  background-color: #1c5f86;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%237bc2e7"><title>chevron-right</title><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>');
+}
+button.more:hover {
+  background-color: #fff;
+}
+.selector {
+  padding: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.selector button {
+  font-size: 0.625rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: inherit;
+}
+.selector button:hover,
+.selector button.active {
+  background-color: #2d698d;
+  color: #fff;
+}
+.categories {
+  display: grid;
+  grid-template-rows: repeat(3, 6rem);
+  gap: 2px;
+  background-color: #f2f2f2;
+  padding: 0;
+  overflow: hidden;
+}
+.categories .cat {
+  /* height: 100%; */
+  align-content: center;
+  background-color: #fff;
+  padding: 1rem;
+  column-gap: 1rem;
+  display: grid;
+  grid-template-columns: 2rem 1fr 3rem;
+  grid-template-rows: min-content min-content;
+}
+
+.cat > svg {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  width: 2rem;
+  align-self: center;
+}
+
+.cat button {
+  grid-row: 1/3;
+  grid-column: -2/-1;
+  width: 1.75rem;
+  align-self: center;
+  justify-self: center;
+  height: 1.75rem;
+  border-radius: 50%;
+  border: none;
+  background-size: 50%;
+  background-position: center;
+  background-color: #e5f4f6;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 -6.5 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="%23306687"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>right-arrow</title><desc>Created with Sketch.</desc><g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-1511.000000, -158.000000)" fill="%23306687" fill-rule="nonzero"><g id="1" transform="translate(1350.000000, 120.000000)"><path d="M187.812138,38.5802109 L198.325224,49.0042713 L198.41312,49.0858421 C198.764883,49.4346574 198.96954,49.8946897 199,50.4382227 L198.998248,50.6209428 C198.97273,51.0514917 198.80819,51.4628128 198.48394,51.8313977 L198.36126,51.9580208 L187.812138,62.4197891 C187.031988,63.1934036 185.770571,63.1934036 184.990421,62.4197891 C184.205605,61.6415481 184.205605,60.3762573 184.990358,59.5980789 L192.274264,52.3739093 L162.99947,52.3746291 C161.897068,52.3746291 161,51.4850764 161,50.3835318 C161,49.2819872 161.897068,48.3924345 162.999445,48.3924345 L192.039203,48.3917152 L184.990421,41.4019837 C184.205605,40.6237427 184.205605,39.3584519 184.990421,38.5802109 C185.770571,37.8065964 187.031988,37.8065964 187.812138,38.5802109 Z" id="right-arrow"></path></g></g></g></g></svg>');
+}
+
+.card.img {
+  width: 18rem;
+  height: 14rem;
+  background-image: url("https://source.unsplash.com/black-leather-handbag-on-white-table-J4DnKxz_3sA");
+  background-size: 140%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.card.img button {
+  position: absolute;
+  right: 1rem;
+  width: 1.75rem;
+  align-self: center;
+  justify-self: center;
+  height: 1.75rem;
+  border-radius: 50%;
+  border: none;
+  background-size: 65%;
+  background-position: center;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCaredrediered" stredoke-width="0"></g><g id="SVGRepo_tredaceredCaredrediered" stredoke-linecap="redound" stredoke-linejoin="redound"></g><g id="SVGRepo_iconCaredrediered"><redect width="24" height="24" fill="white"></redect><path fill-redule="evenodd" clip-redule="evenodd" d="M5.36129 3.46995C6.03579 3.16081 6.76287 3 7.50002 3C8.23718 3 8.96425 3.16081 9.63875 3.46995C10.3129 3.77893 10.9185 4.22861 11.4239 4.78788C11.7322 5.12902 12.2678 5.12902 12.5761 4.78788C13.5979 3.65726 15.0068 3.00001 16.5 3.00001C17.9932 3.00001 19.4021 3.65726 20.4239 4.78788C21.4427 5.91515 22 7.42425 22 8.9792C22 10.5342 21.4427 12.0433 20.4239 13.1705L14.2257 20.0287C13.0346 21.3467 10.9654 21.3467 9.77429 20.0287L3.57613 13.1705C3.07086 12.6115 2.67474 11.9531 2.40602 11.2353C2.13731 10.5175 2 9.75113 2 8.9792C2 8.20728 2.13731 7.44094 2.40602 6.72315C2.67474 6.00531 3.07086 5.34694 3.57613 4.78788C4.08157 4.22861 4.68716 3.77893 5.36129 3.46995Z" fill="red"></path></g></svg>');
+}
+
+button.close {
+  background-size: 65%;
+  background-position: center;
+  background-color: #e3f6f4;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="%23000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="%23295970" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"></path></g></svg>');
+}
