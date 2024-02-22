@@ -46,12 +46,19 @@ body {
   background-color: inherit;
   border: none;
 }
-
+.screen .main {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .screen h1 {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 400;
-
+  align-self: center;
+  text-align: center;
+  justify-self: start;
   text-decoration: underline;
   text-underline-offset: 0.75rem;
   text-underline-position: above;
@@ -73,4 +80,86 @@ body {
   background-color: #ec614b;
   fill: #ffffffaa;
   box-shadow: 0 5px 10px 0px #d68a7e;
+}
+.screen form {
+  margin-top: 0.5rem;
+  width: 92%;
+  height: 60%;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: 2rem 2.5rem 2.5rem 1fr;
+  gap: 0.25rem;
+  box-shadow: 0 5px 15px -5px #b89d9886;
+  padding: 1rem;
+}
+form h2 {
+  font-size: 0.825rem;
+}
+form select {
+  border: 2px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 0.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: currentColor;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+form .hourInput {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.25rem;
+}
+.hourInput input {
+  width: 100%;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: currentColor;
+  font-weight: 400;
+  font-size: 1.25rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 2px;
+}
+.hourInput button {
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  border: none;
+
+  border-radius: 2px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  color: #929292;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+form .button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.button-container button {
+  border-radius: 0.125rem;
+  align-self: center;
+  width: 6rem;
+  height: 2.5rem;
+  border: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  color: #929292;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+button.cancel {
+  background-color: inherit;
+}
+button.save {
+  background-color: #ec6749;
+  color: #fff;
 }
