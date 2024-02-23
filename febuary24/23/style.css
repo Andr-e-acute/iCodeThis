@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+  font-family: "Oswald", "Times New Roman", Times, serif;
+  background-color: #435051;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 400;
+  transform: scaleX(0.6);
+  color: #30383b;
+  text-align: center;
+}
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 6rem;
+}
+.countdown > div {
+  width: 12rem;
+  height: 12rem;
+  background-color: #31383d;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.vertical {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #5f7472;
+  transform-origin: bottom left;
+  transform: rotate(-90deg) scaleX(0.7);
+  bottom: 0.25rem;
+  left: 2.5rem;
+}
+
+.countdown > div > p {
+  color: #c93554;
+  font-size: 6rem;
+  transform: scaleX(0.7);
+}
