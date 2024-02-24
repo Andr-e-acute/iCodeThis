@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: #102f60;
+  color: #fff;
+  font-family: monospace;
+}
+main {
+  background-color: #112b59;
+  display: flex;
+  flex-direction: column;
+  max-width: 32rem;
+  box-shadow: 0 15px 25px 5px #0a2550;
+}
+header {
+  background-color: #0a2550;
+  text-align: center;
+  padding: 2rem 2rem;
+}
+header h1 {
+  font-size: 1.375rem;
+  padding: 0 2rem;
+  color: #119adb;
+  margin-bottom: 0.5rem;
+}
+header p {
+  font-size: 1rem;
+  color: #9fa4aaae;
+}
+
+section {
+  color: #314b78;
+}
+section h3 {
+  font-size: 0.875rem;
+  letter-spacing: 5px;
+  padding: 1rem 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #becdcdd0;
+}
+
+section ul {
+  list-style: none;
+}
+section li.done {
+  color: #becdcdd0;
+}
+section ul li {
+  width: 100%;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+section ul li:hover {
+  background-color: #1195d2;
+  color: #fff;
+}
+li.done span.checkmark {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23becdcdd0"><title>check-bold</title><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>');
+}
+li.done:hover span.checkmark {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><title>check-bold</title><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>');
+}
