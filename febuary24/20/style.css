@@ -116,3 +116,28 @@ ul li:hover .download,
 ul li.active .download {
   color: #e54972;
 }
+@media (max-width: 800px) {
+  body {
+    padding: 1rem;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .plan::after {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    min-width: 14rem;
+  }
+  .butt-container {
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+  ul li {
+    height: auto;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+}
